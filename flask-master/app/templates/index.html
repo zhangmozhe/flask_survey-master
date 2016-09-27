@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg1.png') }}" />
+<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg2.png') }}" />
+<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg3.png') }}" />
+<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg4.png') }}" />
+	<div class="jumbotron">
+		{% if not g.user.s1 %}
+		<h3>Hello, <i>{{ g.user.username }}</i></h3>
+		{% else %}
+		<h3>Welcome back, <i>{{ g.user.username }}</i></h3>
+		{% endif %}
+		<p>Please complete the following surveys.</p>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			{% if not g.user.s1 %}
+				<p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('survey_1')}}" role="button">Profile Survey</a></p>
+			{% elif g.user.s1 %}
+				<a class="btn btn-primary btn-lg btn-block disabled" role="button">
+					<span class="glyphicon glyphicon-ok pull-left"></span>	Profile Survey
+				</a>
+				<br>
+				<p>Well done! You've completed the profile survey.</p>
+			{% else %}
+			<p><a class="btn btn-primary btn-lg btn-block disabled" role="button">Research Survey 1</a></p>
+			{% endif %}
+		</div>
+		<div class="col-md-6 col-md-offset-3">
+			{% if g.user.s1 and not g.user.s2%}
+				<p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('survey_2')}}" role="button">Survey Instructions</a></p>
+			{% elif g.user.s2 %}
+				<a class="btn btn-primary btn-lg btn-block disabled" role="button">
+					<span class="glyphicon glyphicon-ok pull-left"></span>	Survey Instructions
+				</a>
+				<br>
+				<p>Awesome! You're good for the survey.</p>
+			{% else %}
+			<p><a class="btn btn-primary btn-lg btn-block disabled" role="button">Research Survey 2</a></p>
+			{% endif %}
+		</div>
+		<div class="col-md-6 col-md-offset-3">
+			{% if g.user.s2 and not g.user.s5%}
+				<p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('survey_5')}}" role="button">IQA Survey</a></p>
+			{% elif g.user.s5 %}
+				<a class="btn btn-primary btn-lg btn-block disabled" role="button">
+					<span class="glyphicon glyphicon-ok pull-left"></span>	IQA Survey
+				</a>
+				<br>
+				<p>Thanks for completing our survey very much!!!</p>
+			{% else %}
+			<p><a class="btn btn-primary btn-lg btn-block disabled" role="button"> IQA Survey </a></p>
+			{% endif %}
+			<br><br><br><br><br>
+		</div>
+	</div>
+	<br>
+{% endblock %}

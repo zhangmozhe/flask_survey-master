@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content%}
+    <div class="jumbotron">
+        <h1>Image Comparison</h1>
+        <p>Description: please rate the image quality with respect to the reference image</p>
+        <p>Thanks for taking this survey</p>
+        <div>
+        <figure><img src="{{ url_for('static', filename='img/iamge_pair1/original.png')}}" height="512" ></figure>
+        <figure><img src="{{ url_for('static', filename='img/iamge_pair1/distored.png')}}" height="512" ></figure>
+        </div>
+    </div>
+{% endblock %}

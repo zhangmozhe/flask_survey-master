@@ -1,0 +1,7 @@
+You have requested the password for your account on research.ecit.fsu.edu. 
+
+Your password is:
+
+{{password}}
+
+Please log in at {{url_for('login', _external = True)}} to continue the survey.

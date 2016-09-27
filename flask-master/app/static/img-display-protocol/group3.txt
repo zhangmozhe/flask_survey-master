@@ -1,0 +1,48 @@
+ 9          MRF  1 
+10         crop  1 
+ 4       rotate  2 
+11       barrel  3 
+20        twirl  1 
+16       rotate  3 
+11    spherical  3 
+ 2          MRF  1 
+ 1        sheer  1 
+19          MRF  1 
+ 9  perspective  1 
+13        sheer  1 
+19        twirl  3 
+ 6         crop  2 
+ 6       rotate  3 
+ 8       barrel  3 
+12          MRF  1 
+11          MRF  1 
+14       rotate  3 
+17        sheer  1 
+ 8        twirl  1 
+ 8       barrel  1 
+15  perspective  1 
+12       barrel  1 
+13    spherical  2 
+ 5       rotate  2 
+17        twirl  1 
+18         crop  3 
+10        twirl  1 
+19  perspective  3 
+14       barrel  3 
+ 2       rotate  1 
+ 7        sheer  1 
+ 6    spherical  1 
+14         crop  1 
+19       rotate  2 
+ 1        sheer  2 
+14        sheer  2 
+13       rotate  1 
+ 9         crop  2 
+10          MRF  1 
+12        twirl  2 
+ 7    spherical  3 
+16          MRF  3 
+20       rotate  1 
+15       rotate  3 
+15         crop  1 
+ 5  perspective  3 

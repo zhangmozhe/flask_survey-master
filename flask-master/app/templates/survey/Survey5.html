@@ -1,0 +1,92 @@
+{% from "macro.html" import render_field %}
+{% extends "base_for_survey.html" %}
+{% block content%}
+  <div class="row" style="margin-top:-4%">
+    <div class="col-lg-12 well">
+      <div class="page-header">
+        <div class="row">
+          <div class="col-md-6 centered">
+              <img class="center-block img-responsive"  id='OriginImg' src="{{ url_for('static', filename=filename1) }}" alt="image for comparison" />
+              <div class="urun-title">Source Image</div>
+          </div>
+          <div class="col-md-6 centered">
+              <img class="center-block img-responsive"  id='menuImg' src="{{ url_for('static', filename=filename2) }}" alt="image for comparison"/>
+              <div class="urun-title" id="image2_title">Distorted Image</div>
+          </div>
+        </div>
+        <form method="POST" action="." class="form form-horizontal">
+          {{ form.csrf_token }}
+          <div class="col-md-12 question1">
+            <h6 class="question_text">Q1: How do you rate the <i>geometric distortion </i>?</h6>
+          </div>
+          <!-- <div class="col-md-8  col-md-offset-1">
+            <p> <i>Bad</i>&nbsp&nbsp&nbsp&nbsp<input name="distortion" id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3" value="3" />&nbsp&nbsp&nbsp&nbsp<i>Excellent</i></p>
+          </div> -->
+          <div class="col-md-6  col-md-offset-1">
+            <input name="distortion" id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1" data-slider-value="3" value="3"/>
+          </div>
+          <div class="col-md-6 col-md-offset-1 distribute">
+            <div>Bad</div><div>Poor</div><div>Fair</div><div>Good</div><div>Excellent</div>
+          </div>
+
+          <div class="col-md-12 question">
+            <h6 class="question_text">Q2: How do you rate the <i>content coverage</i>?</h6>
+          </div>
+          <div class="col-md-6 col-md-offset-1">
+            <input name="coverage" id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1" data-slider-value="3" value="3"/>
+          </div>
+          <div class="col-md-6 col-md-offset-1 distribute">
+            <div>Bad</div><div>Poor</div><div>Fair</div><div>Good</div><div>Excellent</div>
+          </div>
+          <div class="col-md-12 question">
+            <h6 class="question_text">Q3: How do you think of the <i>overall image quality?</i></h6>
+          </div>
+          <div class="col-md-6 col-md-offset-1">
+            <input name="total_marks" id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1" data-slider-value="3" value="3"/>
+          </div>
+          <div class="col-md-6 col-md-offset-1 distribute">
+            <div>Bad</div><div>Poor</div><div>Fair</div><div>Good</div><div>Excellent</div>
+          </div>
+          <div class="col-md-6 col-md-offset">
+            <div class="control-group">
+              <label class="control-label"></label>
+              <div class="controls">
+                <button type="submit" id="submit" class="btn btn-primary">Next</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="col-md-12 col-md-offset">
+          <div class="progress" style="margin-top:5%">
+            <div class="progress-bar" style="width: {{progress}}%"><span>{{("%.1f" % progress)}}% Complete</span></div>
+          </div>
+        </div>
+      </div>
+    </div><br><br><br><br>
+  </div>
+  <br><br>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.3/bootstrap-slider.min.js"></script>
+  <script type="text/javascript">
+  var slider1 = new Slider('#ex1', {
+  tooltip: 'show',
+  formatter: function(value) {
+  return value;
+  }
+  });
+  var slider2 = new Slider('#ex2', {
+  tooltip: 'show',
+  formatter: function(value) {
+  return value;
+  }
+  });
+  var slider3 = new Slider('#ex3', {
+  tooltip: 'show',
+  formatter: function(value) {
+  return value;
+  }
+  });
+  var value1 = slider1.getValue();
+  var value2 = slider2.getValue();
+  var value3 = slider3.getValue();
+  </script>
+{% endblock %}

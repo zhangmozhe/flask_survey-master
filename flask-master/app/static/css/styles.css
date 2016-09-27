@@ -1,0 +1,40 @@
+.navbar-default .navbar-nav>li>a:hover { color: gold !important }
+.navbar-default .navbar-nav>li>a { color: #aaaaaa }
+a.navbar-brand:active { color: #aaaaaa }
+table { border: 1 }
+table, td, th { border: 1px solid #999 !important }
+#imageContainer img { display: none; position: absolute; top: 0; left: 30px; width: 92% }
+html { height: 100% }
+body { font-size: 140%; font-family: 'Roboto', sans-serif; height: 100%; color: #aaaaaa }
+.wrapper { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -3.5em }
+.footer { margin-top: 2px; height: 3em }
+.top-buffer { margin-top: 20px }
+.navbar-default .navbar-text { color: #aaaaaa }
+table { table-layout: auto }
+tbody { overflow: auto }
+#login-title { border-bottom: 0px }
+h6 { line-height: 1.25 }
+.well { background-color: inherit }
+.jumbotron { background-color: inherit }
+.dataTables_filter { width: 100%; float: right; text-align: right }
+.borderless { border: none }
+.image { margin-right: 10px auto; margin-left: 10px auto }
+.product-box { display: inline-block; position: relative }
+.urun-title1 { width: 100%; text-align: center; top: 278px; position: absolute }
+.urun-title { width: 100%; text-align: center }
+#ex1Slider .slider-selection { background: #ffffff }
+.question { margin-top: 8px; margin-bottom: 10px }
+.question1 { margin-top: 16px; margin-bottom: 10px }
+.cleartype { color: #EC6A4E; text-align: center; font-style: italic; font-size: 15px }
+.intro { font-size: 15px; color: #eeeeee }
+.img-responsive { max-height: 600px }
+.question_text { font-size: 18px }
+.canvasjs-chart-credit { display: none }
+.distribute > div { display: inline-block; *display: inline; *zoom: 1; width: 19.4%; text-align: left; font-size: 12.8px }
+.distribute { position: relative; padding-left: 2px }
+ .progress span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    font-style: italic;
+ }

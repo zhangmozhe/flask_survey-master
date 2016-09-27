@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content%}
+<div class="jumbotron">
+  {% from "macro.html" import render_field %}
+<!--  <h1>Welcome to the ECIT Survey</h1><br><br> -->
+  <h2 style="align:center">Consent Form</h2>
+  <p> 
+    My name is Tony, and I am a PhD student in the Department of Electronic and Computer Engineering at Hong Kong University of Science and Technology. I am conducting a research study to propose a new image quality assessment metric which correlates with human perception. 
+    </p>
+    <p>
+    If you agree to be in this study, you will be then asked to create a username and password to start with. You will be advised to <font color="EC6A4E"><strong>NOT</strong></font> provide a password that you currently use or have previously used for another account. 
+    </p>
+<p>
+    If you have any questions or concerns about the questionnaire or about being in this study, you may contact them at <i>zhangboknight[at]gmail.com</i>.
+    </p>
+    </p>
+    <h3><a onclick="window.open('', '_self', ''); window.close();">Back</a></h3>
+  <br>
+      </div>
+ {% endblock %}

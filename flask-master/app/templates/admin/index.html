@@ -1,0 +1,168 @@
+{% extends "admin/layout.html" %}
+{% block content %}
+  <div class="page-header">
+    <h1>Welcome admin,
+    <!-- <small>survey data lies just beyond these links.</small> -->
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin')}}" role="button">All users</a></p>
+    </div>
+    <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin_survey1')}}" role="button">Research Survey 1</a></p>
+    </div>
+    <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin_survey2')}}" role="button">Research Survey 2</a></p>
+    </div>
+    <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin_survey5')}}" role="button">IQA Survey</a></p>
+    </div>
+    </div><!-- /.row -->
+    <div class="page-header">
+      <h2>Statistics</h2>
+    </div>
+    <div class="col-md-12 center-block">
+      <div class="center-block" id="chartContainer" style="height: 300px; width: 80%;">
+      </div>
+    </div>
+    <div class="col-md-12 center-block">
+      <div class="center-block" id="chartContainer1" style="height: 300px; width: 80%;">
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="page-header">
+    <h2>All Users</h2>
+  </div>
+  <table class="table table-bordered datatable" cellspacing="0" width="100%" style="background-color:#464545;">
+    <thead>
+      <tr>
+        <!-- <th>Email</th> -->
+        <th>User name</th>
+        <th>Group</th>
+        <th>Survey 1</th>
+        <th>Survey 2</th>
+        <th>IQA survey</th>
+        <th># of answers</th>
+        <th>Login Time</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{user.username}}</td>
+          <!-- <td>{{user.email}}</td> -->
+          <td>{{user.group}}</td>
+          <td>{{user.s1}}</td>
+          <td>{{user.s2}}</td>
+          <td>{{user.s5}}</td>
+          <td>{{user.question_index}}</td>
+          <td>{{user.lastSeen}}</td>
+          <td>{{user.country}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <form method="POST" action="/admin" class="form form-horizontal">
+    <h2>Table of Users ({{user_finished_total}}/{{users_num}} finished)</h2>
+    <table class="table table-hover table-striped" data-url="data1.json" data-height="299" data-click-to-select="true">
+      <thead>
+        <tr>
+          <th data-field="state" data-checkbox="true"></th>
+          <th data-field="id" data-align="right">User name</th>
+          <th data-field="name" data-align="center">Survey finished?</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+          <tr>
+            <td><input type="checkbox" name="check" value="{{ user.username }}">&nbsp;</td>
+            <td>{{user.username}}</td>
+            <td>{{user.s5}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <label class="control-label"></label>
+    <div class="controls">
+      <button type="submit" id="submit" class="btn btn-primary">Delete these users</button>
+    </div>
+  </form>
+  <br><br>
+  <h2>Download database</h2>
+  <a href="/static/database/survey.sqlite" download>
+    <img border="0" src="/static/img/database.png" alt="Database download" height="145">
+  </a>
+  
+  <br><br><br><br><br><br>
+  <script type="text/javascript">
+  window.onload = function () {
+  var chart = new CanvasJS.Chart("chartContainer",
+  {
+  theme:"theme1",
+  title:{
+  text: "Group Completion",
+  fontColor:"white"
+  },
+  backgroundColor: "transparent",
+  axisX:{
+  labelFontColor: "white",
+  labelFontSize: 18,
+  },
+  axisY:{
+  labelFontColor: "white",
+  labelFontSize: 18,
+  },
+  data: [
+  {
+  dataPoints: [
+  { x: 1, y: {{group_count[0]}},  label: "Group0"},
+  { x: 2, y: {{group_count[1]}},  label: "Group1" },
+  { x: 3, y: {{group_count[2]}},  label: "Group2"},
+  { x: 4, y: {{group_count[3]}},  label: "Group3"},
+  { x: 5, y: {{group_count[4]}},  label: "Group4"},
+  { x: 6, y: {{group_count[5]}},  label: "Group5"},
+  { x: 7, y: {{group_count[6]}},  label: "Group6" },
+  { x: 8, y: {{group_count[7]}},  label: "Group7"},
+  { x: 9, y: {{group_count[8]}},  label: "Group9"},
+  { x: 10, y: {{group_count[9]}},  label: "Group10"}
+  ]
+  }
+  ]
+  });
+  chart.render();
+  var chart1 = new CanvasJS.Chart("chartContainer1",
+  {
+  theme:"theme1",
+  title:{
+  text: "Daily Pageview",
+  fontColor:"white"
+  },
+  backgroundColor: "transparent",
+  axisX:{
+  labelFontColor: "white",
+  labelFontSize: 18,
+  },
+  axisY:{
+  labelFontColor: "white",
+  labelFontSize: 18,
+  },
+  data: [
+  {
+  type: "line",
+  color: "LightSkyBlue",
+  dataPoints: [
+  {% for count in count_per_day %}
+    { x: {{count[0]}}, y: {{count[1]}}},
+  {% endfor %}
+  ]
+  }
+  ]
+  });
+  chart1.render();
+  }
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+{% endblock %}

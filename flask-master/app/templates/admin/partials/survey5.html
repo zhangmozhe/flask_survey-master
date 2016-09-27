@@ -1,0 +1,60 @@
+{% extends "admin/layout.html" %}
+{% block content%}
+  <div class="row">
+    <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin')}}" role="button">All users</a></p>
+    </div>
+    <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin_survey1')}}" role="button">Research Survey 1</a></p>
+    </div>
+    <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin_survey2')}}" role="button">Research Survey 2</a></p>
+    </div>
+    <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin_survey5')}}" role="button">IQA Survey</a></p>
+    </div>
+  </div>
+  <div class="page-header">
+    <h1>My survey
+    <small>User Responses</small>
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered scroll" cellspacing="0" width="100%" style="background-color:#464545;">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Group index</th>
+            <th>Question index</th>
+            <th>Image index</th>
+            <th>Distortion type</th>
+            <th>Distortion level</th>
+            <th>Distortion marks</th>
+            <th>Coverage marks</th>
+            <th>Total marks</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for survey in surveys %}
+            <tr>
+              <td>{{ survey.user.username }}</td>
+              <td>{{ survey.user.group }}</td>
+              <td>{{ survey.question_index }}</td>
+              <td>{{ survey.image_index }}</td>
+              <td>{{ survey.distortion_type }}</td>
+              <td>{{ survey.distortion_level }}</td>
+              <td>{{ survey.distortion }}</td>
+              <td>{{ survey.coverage }}</td>
+              <td>{{ survey.total_marks }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <br><br><br><br><br><br>
+    </div>
+  </div>
+  <style type="text/css">
+  th, td { white-space: nowrap; }
+  </style>
+{% endblock %}

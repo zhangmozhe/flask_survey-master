@@ -1,0 +1,59 @@
+{% macro render_field(field) %}
+<font size="3.5">
+{% if field.errors %}
+  <div class="form-group has-error">
+    {{ field.label(class="control-label", for=field.name) }}
+    {{ field(**kwargs)|safe }}
+    {% for error in field.errors %}
+      <span class="help-block has-error">{{ error|e }}</span>
+    {% endfor %}
+  </div>
+{% else %}
+  {% if field.type == 'BooleanField' %}
+    <div class="form-group row">
+      {{ field(**kwargs) }}
+      {{ field.label(class="control-label", for=field.name) }}
+    </div>
+  {% else %}
+    <div class="form-group">
+      {{ field.label(class="control-label", for=field.name) }}<br> <p class="small"></p>
+      {% if field.type == 'RadioField' and field.choices == [('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'),('5', '5')] or field.choices == [('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'),('5', '5'), ('6', '6'), ('7', '7'), ('8', '8'), ('9', '9')] %}
+        {% for subfield in field %}
+          &nbsp &nbsp &nbsp &nbsp &nbsp 
+            <!-- <div class="radio-inline" for="Radios_Grape"> -->
+            <div class="btn-group">
+            <tr>
+              <td> {{ subfield(class="magic-radio radio_inline")}} </td>
+              <td> {{ subfield.label}} </td>
+            </tr>
+            </div>
+        {% endfor %}
+      {% else %}
+        {{ field(**kwargs) }}
+      {% endif %}
+      
+    </div>
+  {% endif %}
+{% endif %}
+</font>
+{% endmacro %}
+{% macro render_input_ca(field) %}
+{% if field.errors %}
+<div class="form-group has-error">
+  {{ field.label(class="col-lg-3 control-label", for=field.name) }}
+  <div class="col-lg-9">
+    {{ field(**kwargs)|safe }}
+    {% for error in field.errors %}
+      <span class="help-block">{{ error|e }}</span>
+    {% endfor %}
+  </div>
+</div>
+{% else %}
+<div class="form-group">
+  {{ field.label(class="col-lg-3 control-label", for=field.name) }}
+  <div class="col-lg-9">
+    {{ field(**kwargs) }}
+  </div>
+</div>
+{% endif %}
+{% endmacro %}

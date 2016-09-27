@@ -1,0 +1,20 @@
+{
+  "name": "ECIT Password Survey",
+  "version": "0.1.0",
+  "homepage": "https://github.com/frankV/flask_survey",
+  "authors": [
+    "Frank Valcarcel <fvalcarcel@me.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/static/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}

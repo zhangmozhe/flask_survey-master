@@ -1,0 +1,60 @@
+{% extends "admin/layout.html" %}
+
+{% block content%}
+
+
+<div class="row">
+  <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin')}}" role="button">All users</a></p>
+  </div>
+
+  <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin_survey1')}}" role="button">Research Survey 1</a></p>
+  </div>
+
+  <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin_survey2')}}" role="button">Research Survey 2</a></p>
+  </div>
+
+  <div class="col-md-3">
+      <p><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('admin_survey5')}}" role="button">IQA Survey</a></p>
+  </div>
+
+</div>
+
+<div class="page-header">
+   <h1>Survey 1
+      <small>User Responses</small>
+   </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+
+  <table class="table table-bordered datatable" cellspacing="0" width="100%" style="background-color:#464545;">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Experience</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for survey in surveys %}
+      <tr>
+        <td>{{ survey.user.username }}</td>
+        <td>{{ survey.gender }}</td>
+        <td>{{ survey.age }}</td>
+        <td>{{ survey.experience }}</td>
+        <td>{{ survey.email }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <br><br><br><br><br><br>
+  </div>
+</div>
+{% endblock %}

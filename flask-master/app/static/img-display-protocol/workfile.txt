@@ -1,0 +1,480 @@
+ 1         crop  1 
+ 1         crop  2 
+ 1         crop  3 
+ 1       rotate  1 
+ 1       rotate  2 
+ 1       rotate  3 
+ 1        sheer  1 
+ 1        sheer  2 
+ 1        sheer  3 
+ 1  perspective  1 
+ 1  perspective  2 
+ 1  perspective  3 
+ 1    spherical  1 
+ 1    spherical  2 
+ 1    spherical  3 
+ 1       barrel  1 
+ 1       barrel  2 
+ 1       barrel  3 
+ 1          MRF  1 
+ 1          MRF  2 
+ 1          MRF  3 
+ 1        twirl  1 
+ 1        twirl  2 
+ 1        twirl  3 
+ 2         crop  1 
+ 2         crop  2 
+ 2         crop  3 
+ 2       rotate  1 
+ 2       rotate  2 
+ 2       rotate  3 
+ 2        sheer  1 
+ 2        sheer  2 
+ 2        sheer  3 
+ 2  perspective  1 
+ 2  perspective  2 
+ 2  perspective  3 
+ 2    spherical  1 
+ 2    spherical  2 
+ 2    spherical  3 
+ 2       barrel  1 
+ 2       barrel  2 
+ 2       barrel  3 
+ 2          MRF  1 
+ 2          MRF  2 
+ 2          MRF  3 
+ 2        twirl  1 
+ 2        twirl  2 
+ 2        twirl  3 
+ 3         crop  1 
+ 3         crop  2 
+ 3         crop  3 
+ 3       rotate  1 
+ 3       rotate  2 
+ 3       rotate  3 
+ 3        sheer  1 
+ 3        sheer  2 
+ 3        sheer  3 
+ 3  perspective  1 
+ 3  perspective  2 
+ 3  perspective  3 
+ 3    spherical  1 
+ 3    spherical  2 
+ 3    spherical  3 
+ 3       barrel  1 
+ 3       barrel  2 
+ 3       barrel  3 
+ 3          MRF  1 
+ 3          MRF  2 
+ 3          MRF  3 
+ 3        twirl  1 
+ 3        twirl  2 
+ 3        twirl  3 
+ 4         crop  1 
+ 4         crop  2 
+ 4         crop  3 
+ 4       rotate  1 
+ 4       rotate  2 
+ 4       rotate  3 
+ 4        sheer  1 
+ 4        sheer  2 
+ 4        sheer  3 
+ 4  perspective  1 
+ 4  perspective  2 
+ 4  perspective  3 
+ 4    spherical  1 
+ 4    spherical  2 
+ 4    spherical  3 
+ 4       barrel  1 
+ 4       barrel  2 
+ 4       barrel  3 
+ 4          MRF  1 
+ 4          MRF  2 
+ 4          MRF  3 
+ 4        twirl  1 
+ 4        twirl  2 
+ 4        twirl  3 
+ 5         crop  1 
+ 5         crop  2 
+ 5         crop  3 
+ 5       rotate  1 
+ 5       rotate  2 
+ 5       rotate  3 
+ 5        sheer  1 
+ 5        sheer  2 
+ 5        sheer  3 
+ 5  perspective  1 
+ 5  perspective  2 
+ 5  perspective  3 
+ 5    spherical  1 
+ 5    spherical  2 
+ 5    spherical  3 
+ 5       barrel  1 
+ 5       barrel  2 
+ 5       barrel  3 
+ 5          MRF  1 
+ 5          MRF  2 
+ 5          MRF  3 
+ 5        twirl  1 
+ 5        twirl  2 
+ 5        twirl  3 
+ 6         crop  1 
+ 6         crop  2 
+ 6         crop  3 
+ 6       rotate  1 
+ 6       rotate  2 
+ 6       rotate  3 
+ 6        sheer  1 
+ 6        sheer  2 
+ 6        sheer  3 
+ 6  perspective  1 
+ 6  perspective  2 
+ 6  perspective  3 
+ 6    spherical  1 
+ 6    spherical  2 
+ 6    spherical  3 
+ 6       barrel  1 
+ 6       barrel  2 
+ 6       barrel  3 
+ 6          MRF  1 
+ 6          MRF  2 
+ 6          MRF  3 
+ 6        twirl  1 
+ 6        twirl  2 
+ 6        twirl  3 
+ 7         crop  1 
+ 7         crop  2 
+ 7         crop  3 
+ 7       rotate  1 
+ 7       rotate  2 
+ 7       rotate  3 
+ 7        sheer  1 
+ 7        sheer  2 
+ 7        sheer  3 
+ 7  perspective  1 
+ 7  perspective  2 
+ 7  perspective  3 
+ 7    spherical  1 
+ 7    spherical  2 
+ 7    spherical  3 
+ 7       barrel  1 
+ 7       barrel  2 
+ 7       barrel  3 
+ 7          MRF  1 
+ 7          MRF  2 
+ 7          MRF  3 
+ 7        twirl  1 
+ 7        twirl  2 
+ 7        twirl  3 
+ 8         crop  1 
+ 8         crop  2 
+ 8         crop  3 
+ 8       rotate  1 
+ 8       rotate  2 
+ 8       rotate  3 
+ 8        sheer  1 
+ 8        sheer  2 
+ 8        sheer  3 
+ 8  perspective  1 
+ 8  perspective  2 
+ 8  perspective  3 
+ 8    spherical  1 
+ 8    spherical  2 
+ 8    spherical  3 
+ 8       barrel  1 
+ 8       barrel  2 
+ 8       barrel  3 
+ 8          MRF  1 
+ 8          MRF  2 
+ 8          MRF  3 
+ 8        twirl  1 
+ 8        twirl  2 
+ 8        twirl  3 
+ 9         crop  1 
+ 9         crop  2 
+ 9         crop  3 
+ 9       rotate  1 
+ 9       rotate  2 
+ 9       rotate  3 
+ 9        sheer  1 
+ 9        sheer  2 
+ 9        sheer  3 
+ 9  perspective  1 
+ 9  perspective  2 
+ 9  perspective  3 
+ 9    spherical  1 
+ 9    spherical  2 
+ 9    spherical  3 
+ 9       barrel  1 
+ 9       barrel  2 
+ 9       barrel  3 
+ 9          MRF  1 
+ 9          MRF  2 
+ 9          MRF  3 
+ 9        twirl  1 
+ 9        twirl  2 
+ 9        twirl  3 
+10         crop  1 
+10         crop  2 
+10         crop  3 
+10       rotate  1 
+10       rotate  2 
+10       rotate  3 
+10        sheer  1 
+10        sheer  2 
+10        sheer  3 
+10  perspective  1 
+10  perspective  2 
+10  perspective  3 
+10    spherical  1 
+10    spherical  2 
+10    spherical  3 
+10       barrel  1 
+10       barrel  2 
+10       barrel  3 
+10          MRF  1 
+10          MRF  2 
+10          MRF  3 
+10        twirl  1 
+10        twirl  2 
+10        twirl  3 
+11         crop  1 
+11         crop  2 
+11         crop  3 
+11       rotate  1 
+11       rotate  2 
+11       rotate  3 
+11        sheer  1 
+11        sheer  2 
+11        sheer  3 
+11  perspective  1 
+11  perspective  2 
+11  perspective  3 
+11    spherical  1 
+11    spherical  2 
+11    spherical  3 
+11       barrel  1 
+11       barrel  2 
+11       barrel  3 
+11          MRF  1 
+11          MRF  2 
+11          MRF  3 
+11        twirl  1 
+11        twirl  2 
+11        twirl  3 
+12         crop  1 
+12         crop  2 
+12         crop  3 
+12       rotate  1 
+12       rotate  2 
+12       rotate  3 
+12        sheer  1 
+12        sheer  2 
+12        sheer  3 
+12  perspective  1 
+12  perspective  2 
+12  perspective  3 
+12    spherical  1 
+12    spherical  2 
+12    spherical  3 
+12       barrel  1 
+12       barrel  2 
+12       barrel  3 
+12          MRF  1 
+12          MRF  2 
+12          MRF  3 
+12        twirl  1 
+12        twirl  2 
+12        twirl  3 
+13         crop  1 
+13         crop  2 
+13         crop  3 
+13       rotate  1 
+13       rotate  2 
+13       rotate  3 
+13        sheer  1 
+13        sheer  2 
+13        sheer  3 
+13  perspective  1 
+13  perspective  2 
+13  perspective  3 
+13    spherical  1 
+13    spherical  2 
+13    spherical  3 
+13       barrel  1 
+13       barrel  2 
+13       barrel  3 
+13          MRF  1 
+13          MRF  2 
+13          MRF  3 
+13        twirl  1 
+13        twirl  2 
+13        twirl  3 
+14         crop  1 
+14         crop  2 
+14         crop  3 
+14       rotate  1 
+14       rotate  2 
+14       rotate  3 
+14        sheer  1 
+14        sheer  2 
+14        sheer  3 
+14  perspective  1 
+14  perspective  2 
+14  perspective  3 
+14    spherical  1 
+14    spherical  2 
+14    spherical  3 
+14       barrel  1 
+14       barrel  2 
+14       barrel  3 
+14          MRF  1 
+14          MRF  2 
+14          MRF  3 
+14        twirl  1 
+14        twirl  2 
+14        twirl  3 
+15         crop  1 
+15         crop  2 
+15         crop  3 
+15       rotate  1 
+15       rotate  2 
+15       rotate  3 
+15        sheer  1 
+15        sheer  2 
+15        sheer  3 
+15  perspective  1 
+15  perspective  2 
+15  perspective  3 
+15    spherical  1 
+15    spherical  2 
+15    spherical  3 
+15       barrel  1 
+15       barrel  2 
+15       barrel  3 
+15          MRF  1 
+15          MRF  2 
+15          MRF  3 
+15        twirl  1 
+15        twirl  2 
+15        twirl  3 
+16         crop  1 
+16         crop  2 
+16         crop  3 
+16       rotate  1 
+16       rotate  2 
+16       rotate  3 
+16        sheer  1 
+16        sheer  2 
+16        sheer  3 
+16  perspective  1 
+16  perspective  2 
+16  perspective  3 
+16    spherical  1 
+16    spherical  2 
+16    spherical  3 
+16       barrel  1 
+16       barrel  2 
+16       barrel  3 
+16          MRF  1 
+16          MRF  2 
+16          MRF  3 
+16        twirl  1 
+16        twirl  2 
+16        twirl  3 
+17         crop  1 
+17         crop  2 
+17         crop  3 
+17       rotate  1 
+17       rotate  2 
+17       rotate  3 
+17        sheer  1 
+17        sheer  2 
+17        sheer  3 
+17  perspective  1 
+17  perspective  2 
+17  perspective  3 
+17    spherical  1 
+17    spherical  2 
+17    spherical  3 
+17       barrel  1 
+17       barrel  2 
+17       barrel  3 
+17          MRF  1 
+17          MRF  2 
+17          MRF  3 
+17        twirl  1 
+17        twirl  2 
+17        twirl  3 
+18         crop  1 
+18         crop  2 
+18         crop  3 
+18       rotate  1 
+18       rotate  2 
+18       rotate  3 
+18        sheer  1 
+18        sheer  2 
+18        sheer  3 
+18  perspective  1 
+18  perspective  2 
+18  perspective  3 
+18    spherical  1 
+18    spherical  2 
+18    spherical  3 
+18       barrel  1 
+18       barrel  2 
+18       barrel  3 
+18          MRF  1 
+18          MRF  2 
+18          MRF  3 
+18        twirl  1 
+18        twirl  2 
+18        twirl  3 
+19         crop  1 
+19         crop  2 
+19         crop  3 
+19       rotate  1 
+19       rotate  2 
+19       rotate  3 
+19        sheer  1 
+19        sheer  2 
+19        sheer  3 
+19  perspective  1 
+19  perspective  2 
+19  perspective  3 
+19    spherical  1 
+19    spherical  2 
+19    spherical  3 
+19       barrel  1 
+19       barrel  2 
+19       barrel  3 
+19          MRF  1 
+19          MRF  2 
+19          MRF  3 
+19        twirl  1 
+19        twirl  2 
+19        twirl  3 
+20         crop  1 
+20         crop  2 
+20         crop  3 
+20       rotate  1 
+20       rotate  2 
+20       rotate  3 
+20        sheer  1 
+20        sheer  2 
+20        sheer  3 
+20  perspective  1 
+20  perspective  2 
+20  perspective  3 
+20    spherical  1 
+20    spherical  2 
+20    spherical  3 
+20       barrel  1 
+20       barrel  2 
+20       barrel  3 
+20          MRF  1 
+20          MRF  2 
+20          MRF  3 
+20        twirl  1 
+20        twirl  2 
+20        twirl  3 

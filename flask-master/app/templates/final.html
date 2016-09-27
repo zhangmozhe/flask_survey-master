@@ -1,0 +1,32 @@
+{% from "macro.html" import render_field %}
+{% extends "base.html" %}
+{% block content %}
+    <script src="{{ url_for('static', filename='jquery/post_comment.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <div class="row" style="margin-top:2%">
+        <div class="col-lg-12 well text-center">
+            <h3 style="line-height:120%">Dear <i>{{g.user.username}}</i>, you've completed the survey! Thanks a lot for your cooperation and best wishes to your daily life~  &#128522; &#128522;</h3><br>
+            <h5>** <u>Please type your username into the Amazon Mechanical Turk system for payment. </u></h5>
+            <h5><u>We'll pay for your effort in three days after checking the result.</u></h5>
+            <h3></h3>
+        </div>
+    </div>
+    <div class="col-md-10 col-md-offset-1 well" style="margin-top:0%">
+        <form method="POST" action="." class="form form-horizontal">
+            {{ form.csrf_token }}
+            <h6>Please leave your comment here (optional). After that you may directly close this window.</h6>
+            <div class="form-group">
+                <textarea  class="form-control status-box" id="comment" name="comment" type="text" value="" row="5" placeholder="comments here... (e.g. My God, I don't want to do such kind of survey anymore?)"></textarea>
+            </div>
+            <div class="button-group pull-right">
+                <p class="counter">360</p>
+                <!-- <a href="#" class="btn btn-primary">Post</a> -->
+                <button type="submit" id="submit" class="btn btn-primary">Post</button>
+            </div>
+        </form>
+        <ul class="posts">
+        </ul>
+        <!-- <div><br><br></div> -->
+    </div>
+    
+{% endblock %}
