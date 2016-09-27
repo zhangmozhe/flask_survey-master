@@ -16,7 +16,7 @@ from decorators import admin_required
 import datetime
 import uuid
 from random import randint, shuffle
-from img_info import SOURCE_PER_GROUP, IMAGE_PER_GROUP, DISTORTION_TYPES, DISTORTION_LEVELS, IMAGE_NUM, IMG_SERVER, GROUP_NUM
+from img_info import SOURCE_PER_GROUP, IMAGE_PER_GROUP, IMAGE_NUM, IMG_SERVER, GROUP_NUM
 import os
 import linecache
 import pygeoip
