@@ -1,48 +1,52 @@
- 4       rotate  1 
- 4        sheer  3 
- 9       barrel  1 
-15        twirl  2 
-14       barrel  2 
-17  perspective  1 
- 6  perspective  2 
- 1       barrel  2 
-17          MRF  1 
- 6       rotate  2 
-15        twirl  3 
-14  perspective  2 
- 5    spherical  1 
-17       barrel  1 
-11        sheer  1 
- 2       barrel  3 
-10       rotate  3 
- 6        sheer  3 
-12       barrel  2 
-16       rotate  1 
-12          MRF  3 
-13         crop  3 
- 3         crop  3 
-13         crop  1 
-20       barrel  1 
-19       rotate  3 
-11  perspective  3 
- 3          MRF  2 
- 3       rotate  2 
+ 7        sheer  2 
+12       rotate  1 
+17        twirl  3 
+15          MRF  1 
+18         crop  1 
+13  perspective  2 
+18    spherical  1 
+17        twirl  1 
+14  perspective  1 
+12       rotate  2 
+ 6          MRF  2 
+ 6        sheer  2 
+ 7  perspective  2 
+18         crop  3 
+13         crop  2 
+ 8       barrel  1 
  5  perspective  1 
-15        sheer  3 
-15    spherical  1 
- 4  perspective  3 
- 2         crop  3 
- 8        twirl  3 
-13          MRF  2 
+12          MRF  3 
+12          MRF  2 
+ 7          MRF  3 
+19       barrel  1 
+ 2         crop  2 
+18  perspective  1 
+19        sheer  1 
+13        sheer  3 
+ 2  perspective  3 
+13         crop  1 
+19       barrel  3 
+ 2        sheer  2 
+14    spherical  1 
+ 5          MRF  1 
  6          MRF  1 
-20         crop  3 
-11       rotate  2 
- 1  perspective  2 
-16       rotate  2 
- 9       rotate  2 
-16  perspective  3 
- 4         crop  2 
-13        twirl  2 
-17       rotate  3 
-12        sheer  3 
- 5          MRF  2 
+20        twirl  2 
+19          MRF  1 
+ 6        sheer  3 
+13       barrel  2 
+17          MRF  1 
+ 8    spherical  3 
+ 8         crop  1 
+ 8       barrel  3 
+15       rotate  2 
+10        twirl  1 
+16       rotate  3 
+10       barrel  1 
+17       barrel  1 
+19        sheer  2 
+ 9        twirl  1 
+15        sheer  2 
+17  perspective  3 
+13       rotate  2 
+ 7        sheer  2 
+12       rotate  1 

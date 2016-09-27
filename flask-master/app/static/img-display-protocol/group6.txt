@@ -1,48 +1,52 @@
- 9       barrel  2 
-11        twirl  2 
-16        twirl  1 
-14    spherical  2 
- 7       barrel  2 
-20         crop  1 
-12    spherical  2 
-12        sheer  2 
- 4        twirl  1 
- 8    spherical  1 
-18  perspective  2 
-13       barrel  3 
- 2          MRF  3 
- 3    spherical  3 
+ 4         crop  1 
+ 1  perspective  3 
+15       barrel  3 
+ 4  perspective  2 
+ 4        sheer  3 
+ 2         crop  3 
+ 8         crop  3 
+ 8        twirl  3 
+18        twirl  1 
+ 5          MRF  2 
+ 7         crop  3 
+16          MRF  2 
+ 5  perspective  3 
+13        sheer  2 
+ 5        sheer  2 
+15       rotate  3 
+10        sheer  1 
+15        sheer  1 
+17        sheer  1 
+ 6          MRF  3 
+ 8        twirl  1 
+ 9          MRF  3 
+17  perspective  2 
+15          MRF  2 
 17    spherical  2 
+ 7       rotate  2 
+ 9  perspective  2 
+20          MRF  2 
+ 6       rotate  3 
+15          MRF  3 
+18         crop  2 
+ 9         crop  3 
+ 8        sheer  2 
+ 2        twirl  3 
+17        sheer  2 
+15       barrel  1 
  7       barrel  3 
-15  perspective  3 
-20       rotate  3 
- 8          MRF  1 
- 7    spherical  1 
- 5       barrel  3 
-18        twirl  3 
-14          MRF  2 
- 2  perspective  2 
-17          MRF  3 
- 8       barrel  2 
+11       barrel  2 
+12       rotate  3 
+ 2    spherical  3 
+ 5        twirl  3 
  1       barrel  1 
-16  perspective  2 
-19    spherical  1 
- 5         crop  2 
-12          MRF  2 
-19       barrel  3 
-18          MRF  1 
- 8        twirl  2 
-16       barrel  1 
-13         crop  2 
-18       rotate  3 
- 2         crop  1 
-19    spherical  3 
- 5    spherical  2 
-17         crop  2 
-11          MRF  2 
-19          MRF  2 
-13    spherical  1 
- 3    spherical  2 
-14          MRF  1 
- 2        sheer  1 
- 6       barrel  1 
+ 9  perspective  3 
+ 2       barrel  3 
+15         crop  3 
+12         crop  1 
+ 1        twirl  1 
+ 7          MRF  2 
+19        twirl  2 
+13         crop  3 
+ 4         crop  1 
+ 1  perspective  3 

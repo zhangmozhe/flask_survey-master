@@ -24,6 +24,7 @@ def batch_index():
             lines = f.readlines()
             f.close()
         shuffle(lines)
+        print lines
         with open(os.path.join(IMAGE_FILE_ROOT, str(i) + '.txt'), 'w+') as g:
             g.writelines(lines)
             g.close()
@@ -32,11 +33,12 @@ def group_images():
     f = open(directory + '/workfile.txt', 'r')
     lines = f.readlines()
     shuffle(lines)
-    f.close()
 
     for group in range(0, GROUP_NUM):
         g = open(directory + '/group'+ str(group) + '.txt', 'w')
         sublines = lines[(group * IMAGE_PER_GROUP):((group + 1) * IMAGE_PER_GROUP)]
+        sublines.append(sublines[0])
+        sublines.append(sublines[1])
         g.writelines(sublines)
         g.close()
 
