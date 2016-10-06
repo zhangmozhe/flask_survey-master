@@ -1,4 +1,4 @@
-from img_info import IMAGE_PER_GROUP, SOURCE_PER_GROUP, GROUP_NUM, DISTORTION_TYPES, DISTORTION_LEVELS, IMAGE_NUM
+from img_info import IMAGE_PER_GROUP, SOURCE_PER_GROUP, GROUP_NUM, DISTORTION_TYPES, DISTORTION_LEVELS, IMAGE_NUM, REDUNDENT_NUM
 import os
 from random import randint, shuffle
 
@@ -36,7 +36,7 @@ def group_images():
 
     for group in range(0, GROUP_NUM):
         g = open(directory + '/group'+ str(group) + '.txt', 'w')
-        sublines = lines[(group * IMAGE_PER_GROUP):((group + 1) * IMAGE_PER_GROUP)]
+        sublines = lines[(group * (IMAGE_PER_GROUP-REDUNDENT_NUM)):((group + 1) * (IMAGE_PER_GROUP-REDUNDENT_NUM))]
         sublines.append(sublines[0])
         sublines.append(sublines[1])
         g.writelines(sublines)

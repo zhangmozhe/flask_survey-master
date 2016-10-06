@@ -1,52 +1,50 @@
- 4         crop  1 
- 1  perspective  3 
-15       barrel  3 
- 4  perspective  2 
- 4        sheer  3 
- 2         crop  3 
- 8         crop  3 
- 8        twirl  3 
-18        twirl  1 
- 5          MRF  2 
- 7         crop  3 
-16          MRF  2 
- 5  perspective  3 
-13        sheer  2 
- 5        sheer  2 
-15       rotate  3 
-10        sheer  1 
-15        sheer  1 
-17        sheer  1 
- 6          MRF  3 
- 8        twirl  1 
- 9          MRF  3 
-17  perspective  2 
-15          MRF  2 
-17    spherical  2 
- 7       rotate  2 
- 9  perspective  2 
-20          MRF  2 
+20       barrel  1 
+10       barrel  1 
+12    spherical  1 
+ 1        sheer  2 
+20        sheer  2 
+ 6       barrel  1 
+ 2       rotate  2 
+ 1        sheer  1 
+ 3         crop  3 
+16    spherical  1 
+ 4       barrel  1 
  6       rotate  3 
-15          MRF  3 
-18         crop  2 
- 9         crop  3 
- 8        sheer  2 
- 2        twirl  3 
-17        sheer  2 
-15       barrel  1 
- 7       barrel  3 
-11       barrel  2 
-12       rotate  3 
- 2    spherical  3 
- 5        twirl  3 
- 1       barrel  1 
- 9  perspective  3 
+12  perspective  2 
+ 7         crop  1 
+ 5         crop  2 
+ 5  perspective  2 
+ 4    spherical  1 
  2       barrel  3 
-15         crop  3 
-12         crop  1 
- 1        twirl  1 
- 7          MRF  2 
-19        twirl  2 
-13         crop  3 
- 4         crop  1 
- 1  perspective  3 
+15         crop  1 
+15        sheer  2 
+18          MRF  2 
+16       barrel  1 
+ 2  perspective  2 
+10          MRF  3 
+19       barrel  2 
+11          MRF  2 
+17       rotate  2 
+ 6         crop  1 
+ 4        sheer  2 
+ 3        twirl  2 
+ 3          MRF  3 
+18    spherical  3 
+17  perspective  1 
+ 1       rotate  3 
+ 8  perspective  1 
+ 7       rotate  2 
+16          MRF  2 
+ 7       barrel  1 
+17        sheer  2 
+ 9  perspective  3 
+11          MRF  3 
+ 3       barrel  1 
+14  perspective  1 
+ 8       rotate  1 
+ 6        twirl  1 
+12        twirl  3 
+11  perspective  3 
+17       barrel  1 
+20       barrel  1 
+10       barrel  1 

@@ -1,52 +1,50 @@
-19          MRF  3 
- 4        twirl  1 
- 8       barrel  2 
-20        twirl  1 
-19         crop  1 
-12        sheer  3 
-19    spherical  2 
- 2        sheer  3 
-14    spherical  3 
-10        twirl  3 
- 4    spherical  2 
-11    spherical  2 
- 6         crop  3 
- 5         crop  1 
-19  perspective  2 
-15        twirl  1 
- 4        sheer  2 
-15        twirl  3 
- 4       rotate  3 
- 8        twirl  2 
-14  perspective  3 
-13    spherical  2 
-15    spherical  1 
-13       rotate  1 
-19    spherical  1 
- 9       rotate  1 
- 4    spherical  1 
-10         crop  2 
- 5       rotate  1 
-10  perspective  2 
-20    spherical  3 
- 6       rotate  1 
-18  perspective  3 
-15    spherical  2 
-17       rotate  3 
- 6        sheer  1 
- 9         crop  1 
- 8       rotate  1 
-16       rotate  2 
-14          MRF  3 
-11    spherical  3 
- 4       rotate  2 
- 8         crop  2 
+12        sheer  1 
+12         crop  2 
+ 3        sheer  3 
+ 6    spherical  2 
+ 2         crop  2 
+16        sheer  3 
 16          MRF  3 
+ 6  perspective  3 
+ 8  perspective  2 
+ 3       barrel  2 
+12         crop  3 
 10        sheer  2 
-10        sheer  3 
- 9       rotate  3 
- 2        twirl  1 
- 2       rotate  2 
- 6       barrel  1 
-19          MRF  3 
- 4        twirl  1 
+13        twirl  3 
+16       barrel  3 
+13          MRF  2 
+20       barrel  3 
+ 7    spherical  3 
+20    spherical  2 
+ 6       barrel  3 
+ 8        twirl  2 
+10  perspective  2 
+ 6       barrel  2 
+10          MRF  1 
+14       rotate  1 
+12        twirl  2 
+13       barrel  2 
+18        sheer  2 
+ 5          MRF  2 
+19        twirl  3 
+19         crop  3 
+ 8        sheer  2 
+ 8       barrel  1 
+ 3  perspective  3 
+11    spherical  3 
+20    spherical  3 
+18          MRF  1 
+ 4          MRF  1 
+12        twirl  1 
+ 9       rotate  1 
+17          MRF  2 
+19  perspective  2 
+11        sheer  1 
+15        twirl  3 
+15       rotate  2 
+14         crop  1 
+ 7        twirl  2 
+ 7         crop  3 
+16    spherical  2 
+12        sheer  1 
+12         crop  2 
