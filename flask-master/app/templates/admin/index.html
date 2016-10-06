@@ -57,7 +57,7 @@
           <td>{{user.group}}</td>
           <td>{{user.s1}}</td>
           <td>{{user.s2}}</td>
-          <td>{{user.s5}}</td>
+          <td>{%if user.s5%} &#x2714; {%else%} &#10006; {%endif%}</td>
           <td>{{user.question_index}}</td>
           <td>{{user.lastSeen}}</td>
           <td>{{user.country}}</td>
@@ -80,7 +80,7 @@
           <tr>
             <td><input type="checkbox" name="check" value="{{ user.username }}">&nbsp;</td>
             <td>{{user.username}}</td>
-            <td>{{user.s5}}</td>
+            <td>{%if user.s5%} &#x2714; {%else%} &#10006; {%endif%}</td>
           </tr>
         {% endfor %}
       </tbody>
@@ -126,8 +126,14 @@
   { x: 6, y: {{group_count[5]}},  label: "Group5"},
   { x: 7, y: {{group_count[6]}},  label: "Group6" },
   { x: 8, y: {{group_count[7]}},  label: "Group7"},
-  { x: 9, y: {{group_count[8]}},  label: "Group9"},
-  { x: 10, y: {{group_count[9]}},  label: "Group10"}
+  { x: 9, y: {{group_count[8]}},  label: "Group8"},
+  { x: 10, y: {{group_count[9]}},  label: "Group9"},
+  { x: 11, y: {{group_count[10]}},  label: "Group10"},
+  { x: 12, y: {{group_count[11]}},  label: "Group11" },
+  { x: 13, y: {{group_count[12]}},  label: "Group12"},
+  { x: 14, y: {{group_count[13]}},  label: "Group13"},
+  { x: 15, y: {{group_count[14]}},  label: "Group14"},
+  { x: 16, y: {{group_count[15]}},  label: "Group15"}
   ]
   }
   ]

@@ -33,6 +33,7 @@ def group_images():
     f = open(directory + '/workfile.txt', 'r')
     lines = f.readlines()
     shuffle(lines)
+    print IMAGE_PER_GROUP
 
     for group in range(0, GROUP_NUM):
         g = open(directory + '/group'+ str(group) + '.txt', 'w')

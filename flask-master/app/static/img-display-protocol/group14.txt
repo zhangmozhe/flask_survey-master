@@ -1,0 +1,32 @@
+16          MRF  2 
+ 5  perspective  1 
+ 7       rotate  2 
+14  perspective  2 
+ 3  perspective  1 
+12          MRF  3 
+20  perspective  1 
+12       rotate  3 
+10         crop  3 
+ 5         crop  1 
+15        twirl  3 
+20          MRF  2 
+16    spherical  3 
+ 4       barrel  3 
+11       barrel  1 
+16         crop  1 
+17       rotate  2 
+ 7       rotate  3 
+17  perspective  2 
+13       barrel  3 
+14       barrel  1 
+11        sheer  1 
+ 5        twirl  3 
+12       rotate  1 
+12       barrel  3 
+14          MRF  2 
+ 5        twirl  2 
+11         crop  2 
+ 4         crop  1 
+11       rotate  2 
+16          MRF  2 
+ 5  perspective  1 
