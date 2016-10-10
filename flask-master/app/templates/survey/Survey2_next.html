@@ -6,8 +6,8 @@
     </div>
     <div class="col-md-11">
       <h5>Example I</h5>
-      <p class="intro">Hover the mouse over a thumbnail image to switch the display for the right image. <br> Observe the difference between the images, then rate the image quality using the following rating scales:<br></p>
-      <p class="cleartype">1&mdash;bad, 2&mdash;poor, 3&mdash;fair, 4&mdash;good, 5&mdash;excellent</p><br>
+      <p class="intro">Hover the mouse over a thumbnail image to switch the display for the large image. <br> Observe the difference between the images, then rate the image quality using the following rating scales:<br></p>
+      <p class="cleartype">1&mdash;bad, 2&mdash;poor, 3&mdash;fair, 4&mdash;good, 5&mdash;excellent<br>During the survey, try to MIMIC the rating scale as the following examples.</p><br>
       <div class="row">
         <div class="col-md-6 centered">
           <div class="product-box">
@@ -42,8 +42,8 @@
         <div class="col-md-12">
           <form class="form form-horizontal">
             <div class="col-md-12 question">
-              <h6>Question A: How do you rate the <font color="EC6A4E"><i>geometric distortion </i></font>? (excellent &hArr; no distortion)</h6>
-              <p class="intro">Hint: the geometry of the second image is severely distorted and the image quality is quite poor, so you may move the slide bar to 2.</p>
+              <h6>Question A: How do you rate the <i>geometric similarity </i>?</h6>
+              <p class="intro">Hint: the geometry of the second image is severely distorted, so you may move the slide bar to 2.0</p>
             </div>
             <div class="col-md-6  col-md-offset-1">
               <input name="distortion" id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1" data-slider-value="2" value="2"/>
@@ -52,8 +52,8 @@
               <div>Bad</div><div>Poor</div><div>Fair</div><div>Good</div><div>Excellent</div>
             </div>
             <div class="col-md-12 question">
-              <h6>Question B: How do you rate the <font color="EC6A4E"><i>content coverage? </i></font></h6>
-              <p class="intro">Hint: because the amount of the <font color="EC6A4E"> meaningful</font> contents is kept exactly (forget about the geometric distortion), therefore you may likely choose 5 for the content coverage.</p>
+              <h6>Question B: How do you rate the <i>content coverage? </i></h6>
+              <p class="intro">Hint: since the amount of the <font color="EC6A4E"> meaningful</font> contents is kept exactly (forget about the geometric similarity), therefore you may likely choose 5.0</p>
             </div>
             <div class="col-md-6  col-md-offset-1">
               <input name="distortion" id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1" data-slider-value="5" value="5"/>
@@ -62,8 +62,8 @@
               <div>Bad</div><div>Poor</div><div>Fair</div><div>Good</div><div>Excellent</div>
             </div>
             <div class="col-md-12 question">
-              <h6>Question C: How do you think of the <font color="EC6A4E"><i>overall image quality </i></font>?</h6>
-              <p class="intro">Hint: in this question, you should consider both of  the geometric distortion (Question A) and content coverage (Question B). In the first glance, you may likely rate the overall image quality as 2.2 (This rating is not necessarily equal to the ratings in question A or B.).</p>
+              <h6>Question C: How do you think of the <i>overall image quality </i>?</h6>
+              <p class="intro">Hint: in this question, you should consider both the geometric similarity and content coverage. In the first glance, you may likely rate the overall image quality as 2.2. This rating is not necessarily equal to the ratings in question A or B.</p>
             </div>
             <div class="col-md-6  col-md-offset-1">
               <input name="distortion" id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1" data-slider-value="2.2" value="2.2"/>
@@ -74,8 +74,8 @@
           </form>
         </div>
       </div>
-      <br><br>
-      <p class="cleartype">No need to stay too much time on each question.<br> Please answer the questions for each image within 15 seconds.</p>
+      <br>
+      <p class="cleartype">There are 32 images in the survey. No need to stay too much time on each question.<br> Please rate for each image within 20 seconds.</p>
       <div class="col-md-11 col-md-offset-1"><hr></div>
     </div>
     <div class="col-md-11">
@@ -95,8 +95,37 @@
         </div>
       </div>
       <div><br></div>
-      <p class="intro">In this example, the geometric structures look quite similar, so feel free to rate the geometric similarity to be 5. <br>However, too much useful contents are lost, therefore you rate the content coverage as 1. <br>The overall image quality can be rated as 1.5 considering geometry & content.</p>
-      <p class="intro">In summary, your rating result will be: 5 (geometry)&mdash;1(content)&mdash;1.5(overall quality)</p>
+      <table class="span center-table">
+        <col width="20">
+        <col width="80">
+        <col width="100">
+        <col width="180">
+        <tr>
+          <th class="text-center guide_table"> Question index </th>
+          <th class="text-center guide_table"> Question </th>
+          <th class="text-center guide_table"> Recommended rating </th>
+          <th class="text-center guide_table"> REMARK </th>
+        </tr>
+        <tr>
+          <td class="guide_table"> A </td>
+          <td class="guide_table"> Geometric similarity </td>
+          <td class="guide_table"> 5.0 </td>
+          <td class="guide_table"> The geometric structures look quite similar although there's content loss</td>
+        </tr>
+        <tr>
+          <td class="guide_table"> B </td>
+          <td class="guide_table"> Content coverage </td>
+          <td class="guide_table"> 1.2 </td>
+          <td class="guide_table"> Most of the image contents are lost.</td>
+        </tr>
+        <tr>
+          <td class="guide_table"> C </td>
+          <td class="guide_table"> Overall quality </td>
+          <td class="guide_table"> 1.5 </td>
+          <td class="guide_table"> Considering both geometry and content similarity, the overall image quality is very bad.</td>
+        </tr>
+      </table>
+      <p class="cleartype">Please rate the geometry and content similarity independently.</p>
       <div class="col-md-11 col-md-offset-1"><hr></div>
     </div>
     <div class="col-md-11">
@@ -116,8 +145,37 @@
         </div>
       </div>
       <div><br></div>
-      <p class="intro">In this example,  the geometric similarity is rated as 5, because no geometric distortion can be perceived. <br> Content similarity is rated as 3.6, because most of the <font color="EC6A4E">important structures</font>, the Unazukin's face, exist in the second image. <br> In all, the overall image quality is rated as 4, because the image preserves the structure and most of the important contents.</p>
-      <p class="intro">Therefore, your rating result will be: 5(geometry)&mdash;3.6(content)&mdash;4(overall quality)</p>
+      <table class="span center-table">
+        <col width="20">
+        <col width="80">
+        <col width="100">
+        <col width="180">
+        <tr>
+          <th class="text-center guide_table"> Question index </th>
+          <th class="text-center guide_table"> Question </th>
+          <th class="text-center guide_table"> Recommended rating </th>
+          <th class="text-center guide_table"> REMARK </th>
+        </tr>
+        <tr>
+          <td class="guide_table"> A </td>
+          <td class="guide_table"> Geometric similarity </td>
+          <td class="guide_table"> 5.0 </td>
+          <td class="guide_table"> There's no geometric similarity that can be perceived. Feel free to rate as 5.0</td>
+        </tr>
+        <tr>
+          <td class="guide_table"> B </td>
+          <td class="guide_table"> Content coverage </td>
+          <td class="guide_table"> 4.5 </td>
+          <td class="guide_table"> Most of the <font color="EC6A4E">important structures</font>, the Unazukin's face, exist in the second image</td>
+        </tr>
+        <tr>
+          <td class="guide_table"> C </td>
+          <td class="guide_table"> Overall quality </td>
+          <td class="guide_table"> 4.0 </td>
+          <td class="guide_table"> The second image preserves the structure and most of the <font color="EC6A4E">meaningful</font> contents</td>
+        </tr>
+      </table>
+      <p class="cleartype">Please mainly consider for important and meaningful object(faces in this example)<br> It's OK when some unimportant objects or pixels are distorted or lost.</p>
       <div class="col-md-11 col-md-offset-1"><hr></div>
     </div>
     <div class="col-md-11">
@@ -137,7 +195,36 @@
         </div>
       </div>
       <div><br></div>
-      <p class="intro">In this example, the woman's face is badly distorted. However, the amount of the content is kept exactly. <br>Therefore, the rating result may be: 1.8(geometry)&mdash;5(content)&mdash;2(overall quality)</p>
+      <table class="span center-table">
+        <col width="20">
+        <col width="80">
+        <col width="100">
+        <col width="180">
+        <tr>
+          <th class="text-center guide_table"> Question index </th>
+          <th class="text-center guide_table"> Question </th>
+          <th class="text-center guide_table"> Recommended rating </th>
+          <th class="text-center guide_table"> REMARK </th>
+        </tr>
+        <tr>
+          <td class="guide_table"> A </td>
+          <td class="guide_table"> Geometric similarity </td>
+          <td class="guide_table"> 1.8 </td>
+          <td class="guide_table"> The woman's face is badly distorted</td>
+        </tr>
+        <tr>
+          <td class="guide_table"> B </td>
+          <td class="guide_table"> Content coverage </td>
+          <td class="guide_table"> 5.0 </td>
+          <td class="guide_table"> The amount of the content is kept exactly</td>
+        </tr>
+        <tr>
+          <td class="guide_table"> C </td>
+          <td class="guide_table"> Overall quality </td>
+          <td class="guide_table"> 2.0 </td>
+          <td class="guide_table"> </td>
+        </tr>
+      </table>
     </div>
     <div class="col-md-11 col-md-offset-1"><hr></div>
     <div class="col-md-11">
@@ -156,9 +243,38 @@
           </div>
         </div>
       </div>
-      <div class="col-md-11 col-md-offset-1"><hr></div>
+      <div class="col-md-11 col-md-offset-1"><br></div>
       <div><br></div>
-      <p class="intro">In this example, the pose of the football player is badly distorted, whereas the important content&mdash;the face&mdash; is also cropped. <br>Therefore, the rating result may be: 1.2(geometry)&mdash;3(content)&mdash;1.6(overall quality)</p>
+      <table class="span center-table">
+        <col width="20">
+        <col width="80">
+        <col width="100">
+        <col width="180">
+        <tr>
+          <th class="text-center guide_table"> Question index </th>
+          <th class="text-center guide_table"> Question </th>
+          <th class="text-center guide_table"> Recommended rating </th>
+          <th class="text-center guide_table"> REMARK </th>
+        </tr>
+        <tr>
+          <td class="guide_table"> A </td>
+          <td class="guide_table"> Geometric similarity </td>
+          <td class="guide_table"> 1.2 </td>
+          <td class="guide_table"> Messi's body is badly distorted</td>
+        </tr>
+        <tr>
+          <td class="guide_table"> B </td>
+          <td class="guide_table"> Content coverage </td>
+          <td class="guide_table"> 1.9 </td>
+          <td class="guide_table"> His body is cropped severely</td>
+        </tr>
+        <tr>
+          <td class="guide_table"> C </td>
+          <td class="guide_table"> Overall quality </td>
+          <td class="guide_table"> 1.6 </td>
+          <td class="guide_table"> </td>
+        </tr>
+      </table>
     </div>
     <div class="col-md-11 col-md-offset-1"><hr></div>
     <div class="col-md-11">
@@ -177,83 +293,112 @@
           </div>
         </div>
       </div>
-      <div class="col-md-11 col-md-offset-1"><hr></div>
+      <div class="col-md-11 col-md-offset-1"><br></div>
       <div><br></div>
-      <p class="intro">The woman's face is distorted poorly, whereas the facial area is cropped severely. <br>Therefore, the rating result may be: 2(geometry)&mdash;1.9(content)&mdash;1.4(overall quality)</p>
-      <p class="intro">Note that the overall quality rating is not necessarily in between of the rating for geometry and content. (here, 1.4<2 and 1.4<1.9)</p><br>
-    </div>
-    <div class="col-md-11">
-      <p class="cleartype">Most important, during the survey, your judging criterion should be consistent.</p>
-    </div>
-    <div class="col-lg-10">
-      <br>
-      <form method="POST" action="." class="form form-horizontal">
-        {{ form.csrf_token }}
-        <div class="col-md-5">
-          <div class="form-group row">
-            <div class="radio">
-              <label class="checkbox">
-                <input type="checkbox" id="termschk" name="consent" onclick="validate()">I've already understood the procedure and ready to go
-              </label>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label"></label>
-            <div class="controls">
-              <button type="submit" id="sign_in" disabled="disabled" class="btn btn-block btn-primary">Confirm</button>
-            </div>
-          </div><br><br><br>
-        </div>
-      </form>
+      <table class="span center-table">
+        <col width="20">
+        <col width="80">
+        <col width="100">
+        <col width="180">
+        <tr>
+          <th class="text-center guide_table"> Question index </th>
+          <th class="text-center guide_table"> Question </th>
+          <th class="text-center guide_table"> Recommended rating </th>
+          <th class="text-center guide_table"> REMARK </th>
+        </tr>
+        <tr>
+          <td class="guide_table"> A </td>
+          <td class="guide_table"> Geometric similarity </td>
+          <td class="guide_table"> 2.0 </td>
+          <td class="guide_table"> </td>
+        </tr>
+        <tr>
+          <td class="guide_table"> B </td>
+          <td class="guide_table"> Content coverage </td>
+          <td class="guide_table"> 1.9 </td>
+          <td class="guide_table"> The face is cropped severely</td>
+        </tr>
+        <tr>
+          <td class="guide_table"> C </td>
+          <td class="guide_table"> Overall quality </td>
+          <td class="guide_table"> 1.4 </td>
+          <td class="guide_table"> The overall quality rating is not necessarily in between. Here, 1.4<2.0 and 1.4<1.9 </td>
+        </tr>
+      </table>
     </div>
   </div>
-  <script>
-  function validate() {
-  var chk = document.getElementById('termschk');
-  if(chk.checked)
-  document.getElementById('sign_in').disabled = false;
-  else
-  document.getElementById('sign_in').disabled = true;
-  }
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.3/bootstrap-slider.min.js"></script>
-  <script type="text/javascript">
-  function onHover1()
-  {
-  $("#menuImg").attr('src', "{{ url_for('static', filename='img/introduction/eg1.png') }}");
-  $('#image1').css('border', '5px solid red');
-  $('#image2').css('border', '5px solid black');
-  var container = document.getElementById('image2_title');
-  container.innerHTML = 'Source Image';
-  }
-  function onHover2()
-  {
-  $("#menuImg").attr('src', "{{ url_for('static', filename='img/introduction/eg2.png') }}");
-  $('#image2').css('border', '5px solid red');
-  $('#image1').css('border', '5px solid black');
-  var container = document.getElementById('image2_title');
-  container.innerHTML = 'Distorted Image';
-  }
-  var slider1 = new Slider('#ex1', {
-  tooltip: 'show',
-  formatter: function(value) {
-  return value;
-  }
-  });
-  var slider2 = new Slider('#ex2', {
-  tooltip: 'show',
-  formatter: function(value) {
-  return value;
-  }
-  });
-  var slider3 = new Slider('#ex3', {
-  tooltip: 'show',
-  formatter: function(value) {
-  return value;
-  }
-  });
-  var value1 = slider1.getValue();
-  var value2 = slider2.getValue();
-  var value3 = slider3.getValue();
-  </script>
+  <div class="col-md-11">
+    <p class="cleartype">Most important, during the survey, your judging criterion should be consistent.<br> That is, your rating scale should be the same across different images:<br>1&mdash;bad, 2&mdash;poor, 3&mdash;fair, 4&mdash;good, 5&mdash;excellent</p>
+  </div>
+  <div class="col-lg-10">
+    <br>
+    <form method="POST" action="." class="form form-horizontal">
+      {{ form.csrf_token }}
+      <div class="col-md-5">
+        <div class="form-group row">
+          <div class="radio">
+            <label class="checkbox">
+              <input type="checkbox" id="termschk" name="consent" onclick="validate()">I've already understood the procedure and ready to go
+            </label>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label"></label>
+          <div class="controls">
+            <button type="submit" id="sign_in" disabled="disabled" class="btn btn-block btn-primary">Confirm</button>
+          </div>
+        </div><br><br><br>
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+function validate() {
+var chk = document.getElementById('termschk');
+if(chk.checked)
+document.getElementById('sign_in').disabled = false;
+else
+document.getElementById('sign_in').disabled = true;
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.3/bootstrap-slider.min.js"></script>
+<script type="text/javascript">
+function onHover1()
+{
+$("#menuImg").attr('src', "{{ url_for('static', filename='img/introduction/eg1.png') }}");
+$('#image1').css('border', '5px solid red');
+$('#image2').css('border', '5px solid black');
+var container = document.getElementById('image2_title');
+container.innerHTML = 'Source Image';
+}
+function onHover2()
+{
+$("#menuImg").attr('src', "{{ url_for('static', filename='img/introduction/eg2.png') }}");
+$('#image2').css('border', '5px solid red');
+$('#image1').css('border', '5px solid black');
+var container = document.getElementById('image2_title');
+container.innerHTML = 'Distorted Image';
+}
+var slider1 = new Slider('#ex1', {
+tooltip: 'show',
+formatter: function(value) {
+return value;
+}
+});
+var slider2 = new Slider('#ex2', {
+tooltip: 'show',
+formatter: function(value) {
+return value;
+}
+});
+var slider3 = new Slider('#ex3', {
+tooltip: 'show',
+formatter: function(value) {
+return value;
+}
+});
+var value1 = slider1.getValue();
+var value2 = slider2.getValue();
+var value3 = slider3.getValue();
+</script>
 {% endblock %}
