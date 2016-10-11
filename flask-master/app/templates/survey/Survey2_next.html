@@ -1,403 +1,399 @@
 {% extends "base.html" %} {% block content%}
-<div class="col-lg-12 well">
-	<div class="page-header">
-		<h3>Examples</h3>
-		<p class="intro">
-			<font color="EC6A4E">IMPORTANT: During the survey, try to mimic the rating scale as the examples.</font>
-		</p>
-	</div>
-	<div class="col-md-11">
-		<h5>Example I</h5>
-		<div class="row">
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block " id='OriginImg' src="{{ url_for('static', filename='img/introduction/eg1.jpg') }}"
-						alt="image for comparison" width="100%" />
-					<div class="urun-title">Source Image</div>
-				</div>
-			</div>
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block" id='menuImg' src="{{ url_for('static', filename='img/introduction/eg2.jpg') }}"
-						alt="image for comparison" width="100%" />
-					<div class="urun-title" id="image2_title">Distorted Image</div>
-				</div>
-			</div>
+	<div class="col-lg-12 well">
+		<div class="page-header">
+			<h3>Examples</h3>
+			<p class="intro">
+				<font color="EC6A4E">IMPORTANT: During the survey, try to mimic the rating scale as the examples.</font>
+			</p>
 		</div>
-		<div><br></div>
-		<!-- <div class="row">
-        <div class="col-md-2">
-          <div class="product-box">
-            <img src="{{ url_for('static', filename='img/introduction/eg1.jpg') }}" id="image1" width="100%" alt="distored image 2" class="align-center img-responsive" onmouseover="onHover1();">
-            <div class="urun-title">Source Image</div>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="product-box">
-            <img src="{{ url_for('static', filename='img/introduction/eg2.jpg') }}" id="image2" width="100%" alt="distored image 2" class="align-center img-responsive" onmouseover="onHover2();" style="border: 5px solid red;">
-            <div class="urun-title">Distorted Image</div>
-          </div>
-        </div>
-      </div> -->
-		<div class="row">
-			<div class="col-md-12"></div>
-			<div class="col-md-12">
-				<form class="form form-horizontal">
-					<div class="col-md-12 question">
-						<h6><strong>Question A: How do you rate the <i>geometric similarity </i>?</strong></h6>
-						<p class="intro">Hint: compared with the source image, the geometry of the second image is severely distorted, so you move the slide
-							bar to 2.0</p>
+		<div class="col-md-11">
+			<h5>Example I</h5>
+			<div class="row">
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block " id='OriginImg' src="{{ url_for('static', filename='img/introduction/eg1.jpg') }}"
+						alt="image for comparison" width="100%" />
+						<div class="urun-title">Source Image</div>
 					</div>
-					<div class="col-md-6  col-md-offset-1">
-						<input name="distortion" id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1"
+				</div>
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block" id='menuImg' src="{{ url_for('static', filename='img/introduction/eg2.jpg') }}"
+						alt="image for comparison" width="100%" />
+						<div class="urun-title" id="image2_title">Distorted Image</div>
+					</div>
+				</div>
+			</div>
+			<div><br></div>
+			<!-- <div class="row">
+				<div class="col-md-2">
+					<div class="product-box">
+						<img src="{{ url_for('static', filename='img/introduction/eg1.jpg') }}" id="image1" width="100%" alt="distored image 2" class="align-center img-responsive" onmouseover="onHover1();">
+						<div class="urun-title">Source Image</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="product-box">
+						<img src="{{ url_for('static', filename='img/introduction/eg2.jpg') }}" id="image2" width="100%" alt="distored image 2" class="align-center img-responsive" onmouseover="onHover2();" style="border: 5px solid red;">
+						<div class="urun-title">Distorted Image</div>
+					</div>
+				</div>
+			</div> -->
+			<div class="row">
+				<div class="col-md-12"></div>
+				<div class="col-md-12">
+					<form class="form form-horizontal">
+						<div class="col-md-12 question">
+							<h6><strong>Question A: How do you rate the <i>geometric similarity </i>?</strong></h6>
+							<p class="intro">Hint: compared with the source image, the geometry of the second image is severely distorted, so you move the slide bar to 2.0.</p>
+						</div>
+						<div class="col-md-6  col-md-offset-1">
+							<input name="distortion" id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1"
 							data-slider-value="2" value="2" />
-					</div>
-					<div class="col-md-6 col-md-offset-1 distribute">
-						<div>Bad</div>
-						<div>Poor</div>
-						<div>Fair</div>
-						<div>Good</div>
-						<div>Excellent</div>
-					</div>
-					<div class="col-md-12 question">
-						<h6><strong>Question B: How do you rate the <i>content coverage? </i></strong></h6>
-						<p class="intro">Hint: forget about the geometric similarity. since the amount of the meaningful contents is kept exactly, therefore
-							you may likely choose 5.0</p>
-					</div>
-					<div class="col-md-6  col-md-offset-1">
-						<input name="distortion" id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1"
+						</div>
+						<div class="col-md-6 col-md-offset-1 distribute">
+							<div>Bad</div>
+							<div>Poor</div>
+							<div>Fair</div>
+							<div>Good</div>
+							<div>Excellent</div>
+						</div>
+						<div class="col-md-12 question">
+							<h6><strong>Question B: How do you rate the <i>content coverage? </i></strong></h6>
+							<p class="intro">Hint: forget about the geometric similarity. Since the amount of the meaningful contents is kept exactly, therefore you may likely choose 5.0.</p>
+						</div>
+						<div class="col-md-6  col-md-offset-1">
+							<input name="distortion" id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1"
 							data-slider-value="5" value="5" />
-					</div>
-					<div class="col-md-6 col-md-offset-1 distribute">
-						<div>Bad</div>
-						<div>Poor</div>
-						<div>Fair</div>
-						<div>Good</div>
-						<div>Excellent</div>
-					</div>
-					<div class="col-md-12 question">
-						<h6><strong>Question C: How do you think of the <i>overall image quality </i>?</strong></h6>
-						<p class="intro">Hint: here you should consider both the geometric similarity and content coverage. In the first glance, you are likely
+						</div>
+						<div class="col-md-6 col-md-offset-1 distribute">
+							<div>Bad</div>
+							<div>Poor</div>
+							<div>Fair</div>
+							<div>Good</div>
+							<div>Excellent</div>
+						</div>
+						<div class="col-md-12 question">
+							<h6><strong>Question C: How do you think of the <i>overall image quality </i>?</strong></h6>
+							<p class="intro">Hint: here you should consider both the geometric similarity and content coverage. In the first glance, you are likely
 							to rate the overall image quality as 2.2. This rating is not necessarily equal to the ratings in question A or B.</p>
-					</div>
-					<div class="col-md-6  col-md-offset-1">
-						<input name="distortion" id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1"
+						</div>
+						<div class="col-md-6  col-md-offset-1">
+							<input name="distortion" id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1"
 							data-slider-value="2.2" value="2.2" />
-					</div>
-					<div class="col-md-6 col-md-offset-1 distribute">
-						<div>Bad</div>
-						<div>Poor</div>
-						<div>Fair</div>
-						<div>Good</div>
-						<div>Excellent</div>
-					</div>
-				</form>
+						</div>
+						<div class="col-md-6 col-md-offset-1 distribute">
+							<div>Bad</div>
+							<div>Poor</div>
+							<div>Fair</div>
+							<div>Good</div>
+							<div>Excellent</div>
+						</div>
+					</form>
+				</div>
 			</div>
-		</div>
-		<br>
-		<p class="cleartype">There are 32 images in the survey. No need to stay too much time on each question.<br> Please rate for each image within
+			<br>
+			<p class="cleartype">There are 32 images in the survey. No need to stay too much time on each question.<br> Please rate for each image within
 			20 seconds.</p>
-		<div class="col-md-11 col-md-offset-1">
-			<hr>
+			<div class="col-md-11 col-md-offset-1">
+				<hr>
+			</div>
 		</div>
-	</div>
-	<div class="col-md-11">
-		<h5>Example II</h5>
-		<div class="row">
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg3.jpg') }}" alt="image for comparison"
+		<div class="col-md-11">
+			<h5>Example II</h5>
+			<div class="row">
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg3.jpg') }}" alt="image for comparison"
 						width="100%" />
-					<div class="urun-title">Source Image</div>
+						<div class="urun-title">Source Image</div>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg4.jpg') }}" alt="image for comparison"
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg4.jpg') }}" alt="image for comparison"
 						width="100%" />
-					<div class="urun-title">Distorted Image</div>
+						<div class="urun-title">Distorted Image</div>
+					</div>
 				</div>
 			</div>
+			<div><br></div>
+			<table class="span center-table">
+				<col width="20">
+				<col width="80">
+				<col width="100">
+				<col width="180">
+				<tr>
+					<th class="text-center guide_table"> Question index </th>
+					<th class="text-center guide_table"> Question </th>
+					<th class="text-center guide_table"> Recommended rating </th>
+					<th class="text-center guide_table"> REMARK </th>
+				</tr>
+				<tr>
+					<td class="guide_table"> A </td>
+					<td class="guide_table"> Geometric similarity </td>
+					<td class="guide_table"> 5.0 </td>
+					<td class="guide_table"> The geometric structures look quite similar although there's content loss</td>
+				</tr>
+				<tr>
+					<td class="guide_table"> B </td>
+					<td class="guide_table"> Content coverage </td>
+					<td class="guide_table"> 1.2 </td>
+					<td class="guide_table"> Most of the image contents are lost.</td>
+				</tr>
+				<tr>
+					<td class="guide_table"> C </td>
+					<td class="guide_table"> Overall quality </td>
+					<td class="guide_table"> 1.5 </td>
+					<td class="guide_table"> Considering both geometry and content similarity, the overall image quality is very bad.</td>
+				</tr>
+			</table>
+			<p class="cleartype">Please rate the geometry and content similarity independently.</p>
+			<div class="col-md-11 col-md-offset-1">
+				<hr>
+			</div>
 		</div>
-		<div><br></div>
-		<table class="span center-table">
-			<col width="20">
-			<col width="80">
-			<col width="100">
-			<col width="180">
-			<tr>
-				<th class="text-center guide_table"> Question index </th>
-				<th class="text-center guide_table"> Question </th>
-				<th class="text-center guide_table"> Recommended rating </th>
-				<th class="text-center guide_table"> REMARK </th>
-			</tr>
-			<tr>
-				<td class="guide_table"> A </td>
-				<td class="guide_table"> Geometric similarity </td>
-				<td class="guide_table"> 5.0 </td>
-				<td class="guide_table"> The geometric structures look quite similar although there's content loss</td>
-			</tr>
-			<tr>
-				<td class="guide_table"> B </td>
-				<td class="guide_table"> Content coverage </td>
-				<td class="guide_table"> 1.2 </td>
-				<td class="guide_table"> Most of the image contents are lost.</td>
-			</tr>
-			<tr>
-				<td class="guide_table"> C </td>
-				<td class="guide_table"> Overall quality </td>
-				<td class="guide_table"> 1.5 </td>
-				<td class="guide_table"> Considering both geometry and content similarity, the overall image quality is very bad.</td>
-			</tr>
-		</table>
-		<p class="cleartype">Please rate the geometry and content similarity independently.</p>
-		<div class="col-md-11 col-md-offset-1">
-			<hr>
-		</div>
-	</div>
-	<div class="col-md-11">
-		<h5>Example III</h5>
-		<div class="row">
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg5.jpg') }}" alt="image for comparison"
+		<div class="col-md-11">
+			<h5>Example III</h5>
+			<div class="row">
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg5.jpg') }}" alt="image for comparison"
 						width="60%" />
-					<div class="urun-title">Source Image</div>
+						<div class="urun-title">Source Image</div>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg6.jpg') }}" alt="image for comparison"
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg6.jpg') }}" alt="image for comparison"
 						width="60%" />
-					<div class="urun-title">Distorted Image</div>
+						<div class="urun-title">Distorted Image</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div><br></div>
-		<table class="span center-table">
-			<col width="20">
-			<col width="80">
-			<col width="100">
-			<col width="180">
-			<tr>
-				<th class="text-center guide_table"> Question index </th>
-				<th class="text-center guide_table"> Question </th>
-				<th class="text-center guide_table"> Recommended rating </th>
-				<th class="text-center guide_table"> REMARK </th>
-			</tr>
-			<tr>
-				<td class="guide_table"> A </td>
-				<td class="guide_table"> Geometric similarity </td>
-				<td class="guide_table"> 5.0 </td>
-				<td class="guide_table"> There's no geometric similarity that can be perceived. Feel free to rate as 5.0</td>
-			</tr>
-			<tr>
-				<td class="guide_table"> B </td>
-				<td class="guide_table"> Content coverage </td>
-				<td class="guide_table"> 4.5 </td>
-				<td class="guide_table"> Most of the
+			<div><br></div>
+			<table class="span center-table">
+				<col width="20">
+				<col width="80">
+				<col width="100">
+				<col width="180">
+				<tr>
+					<th class="text-center guide_table"> Question index </th>
+					<th class="text-center guide_table"> Question </th>
+					<th class="text-center guide_table"> Recommended rating </th>
+					<th class="text-center guide_table"> REMARK </th>
+				</tr>
+				<tr>
+					<td class="guide_table"> A </td>
+					<td class="guide_table"> Geometric similarity </td>
+					<td class="guide_table"> 5.0 </td>
+					<td class="guide_table"> There's no geometric similarity that can be perceived. Feel free to rate as 5.0</td>
+				</tr>
+				<tr>
+					<td class="guide_table"> B </td>
+					<td class="guide_table"> Content coverage </td>
+					<td class="guide_table"> 4.5 </td>
+					<td class="guide_table"> Most of the
 					<font color="EC6A4E">important structures</font>, the Unazukin's face, exist in the second image</td>
-			</tr>
-			<tr>
-				<td class="guide_table"> C </td>
-				<td class="guide_table"> Overall quality </td>
-				<td class="guide_table"> 4.0 </td>
-				<td class="guide_table"> The second image preserves the structure and most of the
+				</tr>
+				<tr>
+					<td class="guide_table"> C </td>
+					<td class="guide_table"> Overall quality </td>
+					<td class="guide_table"> 4.0 </td>
+					<td class="guide_table"> The second image preserves the structure and most of the
 					<font color="EC6A4E">meaningful</font> contents</td>
-			</tr>
-		</table>
-		<p class="cleartype">Please mainly consider for important and meaningful object(faces in this example)<br> It's OK when some unimportant objects
-			or pixels are distorted or lost.</p>
+				</tr>
+			</table>
+			<p class="cleartype">Please mainly consider the important and meaningful objects(faces in this example)<br> It's OK when some unimportant objects or pixels are distorted or lost.</p>
+			<div class="col-md-11 col-md-offset-1">
+				<hr>
+			</div>
+		</div>
+		<div class="col-md-11">
+			<h5>Example IV</h5>
+			<div class="row">
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg7.jpg') }}" alt="image for comparison"
+						width="100%" />
+						<div class="urun-title">Source Image</div>
+					</div>
+				</div>
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg8.jpg') }}" alt="image for comparison"
+						width="100%" />
+						<div class="urun-title">Distorted Image</div>
+					</div>
+				</div>
+			</div>
+			<div><br></div>
+			<table class="span center-table">
+				<col width="20">
+				<col width="80">
+				<col width="100">
+				<col width="180">
+				<tr>
+					<th class="text-center guide_table"> Question index </th>
+					<th class="text-center guide_table"> Question </th>
+					<th class="text-center guide_table"> Recommended rating </th>
+					<th class="text-center guide_table"> REMARK </th>
+				</tr>
+				<tr>
+					<td class="guide_table"> A </td>
+					<td class="guide_table"> Geometric similarity </td>
+					<td class="guide_table"> 1.8 </td>
+					<td class="guide_table"> The woman's face is badly distorted</td>
+				</tr>
+				<tr>
+					<td class="guide_table"> B </td>
+					<td class="guide_table"> Content coverage </td>
+					<td class="guide_table"> 5.0 </td>
+					<td class="guide_table"> The amount of the content is kept exactly</td>
+				</tr>
+				<tr>
+					<td class="guide_table"> C </td>
+					<td class="guide_table"> Overall quality </td>
+					<td class="guide_table"> 2.0 </td>
+					<td class="guide_table"> </td>
+				</tr>
+			</table>
+		</div>
 		<div class="col-md-11 col-md-offset-1">
 			<hr>
 		</div>
-	</div>
-	<div class="col-md-11">
-		<h5>Example IV</h5>
-		<div class="row">
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg7.jpg') }}" alt="image for comparison"
+		<div class="col-md-11">
+			<h5>Example V</h5>
+			<div class="row">
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg9.jpg') }}" alt="image for comparison"
 						width="100%" />
-					<div class="urun-title">Source Image</div>
+						<div class="urun-title">Source Image</div>
+					</div>
+				</div>
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg10.jpg') }}" alt="image for comparison"
+						width="100%" />
+						<div class="urun-title">Distorted Image</div>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg8.jpg') }}" alt="image for comparison"
-						width="100%" />
-					<div class="urun-title">Distorted Image</div>
-				</div>
-			</div>
+			<div class="col-md-11 col-md-offset-1"><br></div>
+			<div><br></div>
+			<table class="span center-table">
+				<col width="20">
+				<col width="80">
+				<col width="100">
+				<col width="180">
+				<tr>
+					<th class="text-center guide_table"> Question index </th>
+					<th class="text-center guide_table"> Question </th>
+					<th class="text-center guide_table"> Recommended rating </th>
+					<th class="text-center guide_table"> REMARK </th>
+				</tr>
+				<tr>
+					<td class="guide_table"> A </td>
+					<td class="guide_table"> Geometric similarity </td>
+					<td class="guide_table"> 1.2 </td>
+					<td class="guide_table"> Messi's body is badly distorted</td>
+				</tr>
+				<tr>
+					<td class="guide_table"> B </td>
+					<td class="guide_table"> Content coverage </td>
+					<td class="guide_table"> 1.9 </td>
+					<td class="guide_table"> His body is cropped severely</td>
+				</tr>
+				<tr>
+					<td class="guide_table"> C </td>
+					<td class="guide_table"> Overall quality </td>
+					<td class="guide_table"> 1.6 </td>
+					<td class="guide_table"> </td>
+				</tr>
+			</table>
 		</div>
-		<div><br></div>
-		<table class="span center-table">
-			<col width="20">
-			<col width="80">
-			<col width="100">
-			<col width="180">
-			<tr>
-				<th class="text-center guide_table"> Question index </th>
-				<th class="text-center guide_table"> Question </th>
-				<th class="text-center guide_table"> Recommended rating </th>
-				<th class="text-center guide_table"> REMARK </th>
-			</tr>
-			<tr>
-				<td class="guide_table"> A </td>
-				<td class="guide_table"> Geometric similarity </td>
-				<td class="guide_table"> 1.8 </td>
-				<td class="guide_table"> The woman's face is badly distorted</td>
-			</tr>
-			<tr>
-				<td class="guide_table"> B </td>
-				<td class="guide_table"> Content coverage </td>
-				<td class="guide_table"> 5.0 </td>
-				<td class="guide_table"> The amount of the content is kept exactly</td>
-			</tr>
-			<tr>
-				<td class="guide_table"> C </td>
-				<td class="guide_table"> Overall quality </td>
-				<td class="guide_table"> 2.0 </td>
-				<td class="guide_table"> </td>
-			</tr>
-		</table>
-	</div>
-	<div class="col-md-11 col-md-offset-1">
-		<hr>
-	</div>
-	<div class="col-md-11">
-		<h5>Example V</h5>
-		<div class="row">
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg9.jpg') }}" alt="image for comparison"
-						width="100%" />
-					<div class="urun-title">Source Image</div>
-				</div>
-			</div>
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg10.jpg') }}" alt="image for comparison"
-						width="100%" />
-					<div class="urun-title">Distorted Image</div>
-				</div>
-			</div>
+		<div class="col-md-11 col-md-offset-1">
+			<hr>
 		</div>
-		<div class="col-md-11 col-md-offset-1"><br></div>
-		<div><br></div>
-		<table class="span center-table">
-			<col width="20">
-			<col width="80">
-			<col width="100">
-			<col width="180">
-			<tr>
-				<th class="text-center guide_table"> Question index </th>
-				<th class="text-center guide_table"> Question </th>
-				<th class="text-center guide_table"> Recommended rating </th>
-				<th class="text-center guide_table"> REMARK </th>
-			</tr>
-			<tr>
-				<td class="guide_table"> A </td>
-				<td class="guide_table"> Geometric similarity </td>
-				<td class="guide_table"> 1.2 </td>
-				<td class="guide_table"> Messi's body is badly distorted</td>
-			</tr>
-			<tr>
-				<td class="guide_table"> B </td>
-				<td class="guide_table"> Content coverage </td>
-				<td class="guide_table"> 1.9 </td>
-				<td class="guide_table"> His body is cropped severely</td>
-			</tr>
-			<tr>
-				<td class="guide_table"> C </td>
-				<td class="guide_table"> Overall quality </td>
-				<td class="guide_table"> 1.6 </td>
-				<td class="guide_table"> </td>
-			</tr>
-		</table>
-	</div>
-	<div class="col-md-11 col-md-offset-1">
-		<hr>
-	</div>
-	<div class="col-md-11">
-		<h5>Example VI</h5>
-		<div class="row">
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg11.jpg') }}" alt="image for comparison"
+		<div class="col-md-11">
+			<h5>Example VI</h5>
+			<div class="row">
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg11.jpg') }}" alt="image for comparison"
 						width="60%" />
-					<div class="urun-title">Source Image</div>
+						<div class="urun-title">Source Image</div>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-6 centered">
-				<div class="product-box">
-					<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg12.jpg') }}" alt="image for comparison"
+				<div class="col-md-6 centered">
+					<div class="product-box">
+						<img class="center-block lazy" data-original="{{ url_for('static', filename='img/introduction/eg12.jpg') }}" alt="image for comparison"
 						width="60%" />
-					<div class="urun-title">Distorted Image</div>
+						<div class="urun-title">Distorted Image</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-md-11 col-md-offset-1"><br></div>
-		<div><br></div>
-		<table class="span center-table">
-			<col width="20">
-			<col width="80">
-			<col width="100">
-			<col width="180">
-			<tr>
-				<th class="text-center guide_table"> Question index </th>
-				<th class="text-center guide_table"> Question </th>
-				<th class="text-center guide_table"> Recommended rating </th>
-				<th class="text-center guide_table"> REMARK </th>
-			</tr>
-			<tr>
-				<td class="guide_table"> A </td>
-				<td class="guide_table"> Geometric similarity </td>
-				<td class="guide_table"> 2.0 </td>
-				<td class="guide_table"> </td>
-			</tr>
-			<tr>
-				<td class="guide_table"> B </td>
-				<td class="guide_table"> Content coverage </td>
-				<td class="guide_table"> 1.9 </td>
-				<td class="guide_table"> The face is cropped severely</td>
-			</tr>
-			<tr>
-				<td class="guide_table"> C </td>
-				<td class="guide_table"> Overall quality </td>
-				<td class="guide_table"> 1.4 </td>
-				<td class="guide_table"> The overall quality rating is not necessarily in between. Here, 1.4
+			<div class="col-md-11 col-md-offset-1"><br></div>
+			<div><br></div>
+			<table class="span center-table">
+				<col width="20">
+				<col width="80">
+				<col width="100">
+				<col width="180">
+				<tr>
+					<th class="text-center guide_table"> Question index </th>
+					<th class="text-center guide_table"> Question </th>
+					<th class="text-center guide_table"> Recommended rating </th>
+					<th class="text-center guide_table"> REMARK </th>
+				</tr>
+				<tr>
+					<td class="guide_table"> A </td>
+					<td class="guide_table"> Geometric similarity </td>
+					<td class="guide_table"> 2.0 </td>
+					<td class="guide_table"> </td>
+				</tr>
+				<tr>
+					<td class="guide_table"> B </td>
+					<td class="guide_table"> Content coverage </td>
+					<td class="guide_table"> 1.9 </td>
+					<td class="guide_table"> The face is cropped severely</td>
+				</tr>
+				<tr>
+					<td class="guide_table"> C </td>
+					<td class="guide_table"> Overall quality </td>
+					<td class="guide_table"> 1.4 </td>
+					<td class="guide_table"> The overall quality rating is not necessarily in between. Here, 1.4
 					<2.0 and 1.4<1.9 </td>
-			</tr>
-		</table>
-	</div>
-</div>
-<div class="col-md-11">
-	<p class="cleartype">Most important, during the survey, your answers should be CONSISTENT.<br> That is, you should use THE SAME rating scale
-		across different images: 1&mdash;bad, 2&mdash;poor, 3&mdash;fair, 4&mdash;good, 5&mdash;excellent <br>Some images need
-		rating twice, so that we can easily detect random answers. We ONLY pay for complete and good job.</p>
-</div>
-<div class="col-lg-10">
-	<br>
-	<form method="POST" action="." class="form form-horizontal">
-		{{ form.csrf_token }}
-		<div class="col-md-6">
-			<div class="form-group row">
-				<div class="radio">
-					<label class="checkbox">
-              <input type="checkbox" id="termschk" name="consent" onclick="validate()">Already understand and ensure to provide accurate result
-            </label>
-				</div>
-			</div>
-			<div class="control-group">
-				<label class="control-label"></label>
-				<div class="controls">
-					<button type="submit" id="sign_in" disabled="disabled" class="btn btn-block btn-primary">Confirm</button>
-				</div>
-			</div><br><br><br>
+				</tr>
+			</table>
 		</div>
-	</form>
-</div>
+	</div>
+	<div class="col-md-11">
+		<p class="cleartype">Most important, during the survey, your answers should be CONSISTENT.<br> That is, you should use THE SAME rating scale
+			across different images: 1&mdash;bad, 2&mdash;poor, 3&mdash;fair, 4&mdash;good, 5&mdash;excellent <br>Some images will be displayed and rated twice, so that we can easily detect random answers. We ONLY pay for complete and good job.</p>
+	</div>
+	<div class="col-lg-10">
+		<br>
+		<form method="POST" action="." class="form form-horizontal">
+			{{ form.csrf_token }}
+			<div class="col-md-6">
+				<div class="form-group row">
+					<div class="radio">
+						<label class="checkbox">
+							<input type="checkbox" id="termschk" name="consent" onclick="validate()">Already understand and ensure to provide accurate result
+						</label>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label"></label>
+					<div class="controls">
+						<button type="submit" id="sign_in" disabled="disabled" class="btn btn-block btn-primary">Confirm</button>
+					</div>
+				</div><br><br><br>
+			</div>
+		</form>
+	</div>
 </div>
 <script>
 function validate() {
@@ -411,9 +407,9 @@ document.getElementById('sign_in').disabled = true;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.3/bootstrap-slider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 <script type="text/javascript">
-    $(function () {
-        $("img.lazy").lazyload({threshold:400});
-    });
+$(function () {
+$("img.lazy").lazyload({threshold:400});
+});
 </script>
 <script>
 function onHover1()
