@@ -2,48 +2,47 @@
 {% block content%}
   <div class="col-lg-12 well">
     <div class="page-header">
-      <h3>In this page, we'll provide some examples</h3>
+      <h3>Examples</h3>
+      <p class="intro"><font color="EC6A4E">IMPORTANT: During the survey, try to mimic the rating scale as the examples.</font></p>
     </div>
     <div class="col-md-11">
       <h5>Example I</h5>
-      <p class="intro">Hover the mouse over a thumbnail image to switch the display for the large image. <br> Observe the difference between the images, then rate the image quality using the following rating scales:<br></p>
-      <p class="cleartype">1&mdash;bad, 2&mdash;poor, 3&mdash;fair, 4&mdash;good, 5&mdash;excellent<br>During the survey, try to MIMIC the rating scale as the following examples.</p><br>
       <div class="row">
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block" id='OriginImg' src="{{ url_for('static', filename='img/introduction/eg1.png') }}" alt="image for comparison" width="100%"/>
+            <img class="center-block" id='OriginImg' src="{{ url_for('static', filename='img/introduction/eg1.jpg') }}" alt="image for comparison" width="100%"/>
             <div class="urun-title">Source Image</div>
           </div>
         </div>
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block" id='menuImg'   src="{{ url_for('static', filename='img/introduction/eg2.png') }}" alt="image for comparison" width="100%"/>
+            <img class="center-block" id='menuImg'   src="{{ url_for('static', filename='img/introduction/eg2.jpg') }}" alt="image for comparison" width="100%"/>
             <div class="urun-title" id="image2_title">Distorted Image</div>
           </div>
         </div>
       </div>
       <div><br></div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-2">
           <div class="product-box">
-            <img src="{{ url_for('static', filename='img/introduction/eg1.png') }}" id="image1" width="100%" alt="distored image 2" class="align-center img-responsive" onmouseover="onHover1();">
+            <img src="{{ url_for('static', filename='img/introduction/eg1.jpg') }}" id="image1" width="100%" alt="distored image 2" class="align-center img-responsive" onmouseover="onHover1();">
             <div class="urun-title">Source Image</div>
           </div>
         </div>
         <div class="col-md-2">
           <div class="product-box">
-            <img src="{{ url_for('static', filename='img/introduction/eg2.png') }}" id="image2" width="100%" alt="distored image 2" class="align-center img-responsive" onmouseover="onHover2();" style="border: 5px solid red;">
+            <img src="{{ url_for('static', filename='img/introduction/eg2.jpg') }}" id="image2" width="100%" alt="distored image 2" class="align-center img-responsive" onmouseover="onHover2();" style="border: 5px solid red;">
             <div class="urun-title">Distorted Image</div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="row">
         <div class="col-md-12"></div>
         <div class="col-md-12">
           <form class="form form-horizontal">
             <div class="col-md-12 question">
-              <h6>Question A: How do you rate the <i>geometric similarity </i>?</h6>
-              <p class="intro">Hint: the geometry of the second image is severely distorted, so you may move the slide bar to 2.0</p>
+              <h6><strong>Question A: How do you rate the <i>geometric similarity </i>?</strong></h6>
+              <p class="intro">Hint: compared with the source image, the geometry of the second image is severely distorted, so you move the slide bar to 2.0</p>
             </div>
             <div class="col-md-6  col-md-offset-1">
               <input name="distortion" id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1" data-slider-value="2" value="2"/>
@@ -52,8 +51,8 @@
               <div>Bad</div><div>Poor</div><div>Fair</div><div>Good</div><div>Excellent</div>
             </div>
             <div class="col-md-12 question">
-              <h6>Question B: How do you rate the <i>content coverage? </i></h6>
-              <p class="intro">Hint: since the amount of the <font color="EC6A4E"> meaningful</font> contents is kept exactly (forget about the geometric similarity), therefore you may likely choose 5.0</p>
+              <h6><strong>Question B: How do you rate the <i>content coverage? </i></strong></h6>
+              <p class="intro">Hint: forget about the geometric similarity. since the amount of the meaningful contents is kept exactly, therefore you may likely choose 5.0</p>
             </div>
             <div class="col-md-6  col-md-offset-1">
               <input name="distortion" id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1" data-slider-value="5" value="5"/>
@@ -62,8 +61,8 @@
               <div>Bad</div><div>Poor</div><div>Fair</div><div>Good</div><div>Excellent</div>
             </div>
             <div class="col-md-12 question">
-              <h6>Question C: How do you think of the <i>overall image quality </i>?</h6>
-              <p class="intro">Hint: in this question, you should consider both the geometric similarity and content coverage. In the first glance, you may likely rate the overall image quality as 2.2. This rating is not necessarily equal to the ratings in question A or B.</p>
+              <h6><strong>Question C: How do you think of the <i>overall image quality </i>?</strong></h6>
+              <p class="intro">Hint: here you should consider both the geometric similarity and content coverage. In the first glance, you are likely to rate the overall image quality as 2.2. This rating is not necessarily equal to the ratings in question A or B.</p>
             </div>
             <div class="col-md-6  col-md-offset-1">
               <input name="distortion" id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="5" data-slider-step="0.1" data-slider-value="2.2" value="2.2"/>
@@ -83,13 +82,13 @@
       <div class="row">
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block" src="{{ url_for('static', filename='img/introduction/eg3.png') }}" alt="image for comparison" width="100%"/>
+            <img class="center-block" src="{{ url_for('static', filename='img/introduction/eg3.jpg') }}" alt="image for comparison" width="100%"/>
             <div class="urun-title">Source Image</div>
           </div>
         </div>
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block"  src="{{ url_for('static', filename='img/introduction/eg4.png') }}" alt="image for comparison" width="100%"/>
+            <img class="center-block"  src="{{ url_for('static', filename='img/introduction/eg4.jpg') }}" alt="image for comparison" width="100%"/>
             <div class="urun-title">Distorted Image</div>
           </div>
         </div>
@@ -133,13 +132,13 @@
       <div class="row">
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block" src="{{ url_for('static', filename='img/introduction/eg5.png') }}" alt="image for comparison" width="60%"/>
+            <img class="center-block" src="{{ url_for('static', filename='img/introduction/eg5.jpg') }}" alt="image for comparison" width="60%"/>
             <div class="urun-title">Source Image</div>
           </div>
         </div>
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block"  src="{{ url_for('static', filename='img/introduction/eg6.png') }}" alt="image for comparison" width="60%"/>
+            <img class="center-block"  src="{{ url_for('static', filename='img/introduction/eg6.jpg') }}" alt="image for comparison" width="60%"/>
             <div class="urun-title">Distorted Image</div>
           </div>
         </div>
@@ -183,13 +182,13 @@
       <div class="row">
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block" src="{{ url_for('static', filename='img/introduction/eg7.png') }}" alt="image for comparison" width="100%"/>
+            <img class="center-block" src="{{ url_for('static', filename='img/introduction/eg7.jpg') }}" alt="image for comparison" width="100%"/>
             <div class="urun-title">Source Image</div>
           </div>
         </div>
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block"  src="{{ url_for('static', filename='img/introduction/eg8.png') }}" alt="image for comparison" width="100%"/>
+            <img class="center-block"  src="{{ url_for('static', filename='img/introduction/eg8.jpg') }}" alt="image for comparison" width="100%"/>
             <div class="urun-title">Distorted Image</div>
           </div>
         </div>
@@ -232,13 +231,13 @@
       <div class="row">
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block" src="{{ url_for('static', filename='img/introduction/eg9.png') }}" alt="image for comparison" width="100%"/>
+            <img class="center-block" src="{{ url_for('static', filename='img/introduction/eg9.jpg') }}" alt="image for comparison" width="100%"/>
             <div class="urun-title">Source Image</div>
           </div>
         </div>
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block"  src="{{ url_for('static', filename='img/introduction/eg10.png') }}" alt="image for comparison" width="100%"/>
+            <img class="center-block"  src="{{ url_for('static', filename='img/introduction/eg10.jpg') }}" alt="image for comparison" width="100%"/>
             <div class="urun-title">Distorted Image</div>
           </div>
         </div>
@@ -282,13 +281,13 @@
       <div class="row">
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block" src="{{ url_for('static', filename='img/introduction/eg11.png') }}" alt="image for comparison" width="60%"/>
+            <img class="center-block" src="{{ url_for('static', filename='img/introduction/eg11.jpg') }}" alt="image for comparison" width="60%"/>
             <div class="urun-title">Source Image</div>
           </div>
         </div>
         <div class="col-md-6 centered">
           <div class="product-box">
-            <img class="center-block"  src="{{ url_for('static', filename='img/introduction/eg12.png') }}" alt="image for comparison" width="60%"/>
+            <img class="center-block"  src="{{ url_for('static', filename='img/introduction/eg12.jpg') }}" alt="image for comparison" width="60%"/>
             <div class="urun-title">Distorted Image</div>
           </div>
         </div>
@@ -328,17 +327,17 @@
     </div>
   </div>
   <div class="col-md-11">
-    <p class="cleartype">Most important, during the survey, your judging criterion should be consistent.<br> That is, your rating scale should be the same across different images:<br>1&mdash;bad, 2&mdash;poor, 3&mdash;fair, 4&mdash;good, 5&mdash;excellent</p>
+    <p class="cleartype">Most important, during the survey, your answers should be CONSISTENT.<br> That is, you should use THE SAME rating scale across different images: 1&mdash;bad, 2&mdash;poor, 3&mdash;fair, 4&mdash;good, 5&mdash;excellent <br>Some images need rating twice, so that we can easily detect random answers. We ONLY pay for complete and good job.</p>
   </div>
   <div class="col-lg-10">
     <br>
     <form method="POST" action="." class="form form-horizontal">
       {{ form.csrf_token }}
-      <div class="col-md-5">
+      <div class="col-md-6">
         <div class="form-group row">
           <div class="radio">
             <label class="checkbox">
-              <input type="checkbox" id="termschk" name="consent" onclick="validate()">I've already understood the procedure and ready to go
+              <input type="checkbox" id="termschk" name="consent" onclick="validate()">Already understand and ensure to provide accurate result
             </label>
           </div>
         </div>
@@ -365,7 +364,7 @@ document.getElementById('sign_in').disabled = true;
 <script type="text/javascript">
 function onHover1()
 {
-$("#menuImg").attr('src', "{{ url_for('static', filename='img/introduction/eg1.png') }}");
+$("#menuImg").attr('src', "{{ url_for('static', filename='img/introduction/eg1.jpg') }}");
 $('#image1').css('border', '5px solid red');
 $('#image2').css('border', '5px solid black');
 var container = document.getElementById('image2_title');
@@ -373,7 +372,7 @@ container.innerHTML = 'Source Image';
 }
 function onHover2()
 {
-$("#menuImg").attr('src', "{{ url_for('static', filename='img/introduction/eg2.png') }}");
+$("#menuImg").attr('src', "{{ url_for('static', filename='img/introduction/eg2.jpg') }}");
 $('#image2').css('border', '5px solid red');
 $('#image1').css('border', '5px solid black');
 var container = document.getElementById('image2_title');

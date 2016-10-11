@@ -45,9 +45,10 @@ def survey_1():
         return redirect(url_for('index'))
 
 
-@app.route('/survey_2_next/', methods=['GET', 'POST'])
+@app.route('/survey_2/', methods=['GET', 'POST'])
 @login_required
-def survey_2_next():
+# def survey_2_next():
+def survey_2():
     g.user = current_user
     if g.user.s1 is not False and g.user.s2 is False:
         form = Survey2Form(request.form)
@@ -60,7 +61,6 @@ def survey_2_next():
             db.session.add(survey)
 
             g.user.s2 = True
-            # g.user.lastSeen = date.today()
             db.session.commit()
             return redirect(url_for('index'))
 
@@ -69,14 +69,14 @@ def survey_2_next():
         return redirect(url_for('index'))
 
 
-@app.route('/survey_2/', methods=['GET', 'POST'])
-@login_required
-def survey_2():
-    g.user = current_user
-    if g.user.s1 is not False and g.user.s2 is False:
-        return render_template('survey/Survey2.html', title='Survey')
-    else:
-        return redirect(url_for('index'))
+# @app.route('/survey_2/', methods=['GET', 'POST'])
+# @login_required
+# def survey_2():
+#     g.user = current_user
+#     if g.user.s1 is not False and g.user.s2 is False:
+#         return render_template('survey/Survey2.html', title='Survey')
+#     else:
+#         return redirect(url_for('index'))
 
 
 @app.route('/survey_5/', methods=['GET', 'POST'])
@@ -101,7 +101,6 @@ def survey_5():
             survey.user = g.user
             db.session.add(survey)
 
-            # g.user.lastSeen = date.today()
             db.session.commit()
             if g.user.question_index >= IMAGE_PER_GROUP:
                 g.user.s5 = True
@@ -130,18 +129,18 @@ def survey_redering(form, method, user_id, group_index):
     image_index, distortion_type, distortion_level = image_index_rendering(
         question_index_show - 1, user_id, group_index)
     filename1 =  'img/' + str(image_index) + '/source ' + \
-        chr(40) + str(image_index) + chr(41) + '.png'
+        chr(40) + str(image_index) + chr(41) + '.jpg'
     filename2 = 'img/' + str(image_index) + '/source (' + str(image_index) + ')' + \
-        '_' + distortion_type + '_' + str(distortion_level) + '.png'
+        '_' + distortion_type + '_' + str(distortion_level) + '.jpg'
 
     if question_index_show < IMAGE_PER_GROUP:
         image_index_next, distortion_type_next, distortion_level_next = image_index_rendering(
             question_index_show, user_id, group_index)
         filename1_next = 'img/' + str(image_index_next) + '/source ' + \
-            chr(40) + str(image_index_next) + chr(41) + '.png'
+            chr(40) + str(image_index_next) + chr(41) + '.jpg'
         filename2_next = 'img/' + str(image_index_next) + '/source (' + str(image_index_next) + ')' + \
             '_' + distortion_type_next + '_' + \
-            str(distortion_level_next) + '.png'
+            str(distortion_level_next) + '.jpg'
     else:
         filename1_next = filename1
         filename2_next = filename2
@@ -154,9 +153,9 @@ def survey_redering(form, method, user_id, group_index):
 def image_index_rendering(question_index, user_id, group_index):
     # filename = str(user_id) + '.txt'
     filename = 'group' + str(group_index) + '.txt'
+    line = linecache.getline(filename, question_index + 1) # start from line 1!
     # app.logger.debug("question_index = %s", question_index)
     # app.logger.debug("filename = %s", filename)
-    line = linecache.getline(filename, question_index + 1) # start from line 1!
     # app.logger.debug("line = %s", line)
     params = line.split()
     # image_index = int(params[0]) + g.user.group * SOURCE_PER_GROUP
@@ -190,6 +189,37 @@ def final():
             return render_template("final.html", title="Thanks!", form=form)
     else:
         return redirect(url_for('index'))
+
+
+@app.route('/turk_acct/', methods=['GET', 'POST'])
+def turk_acct():
+    form = RegistrationForm(request.form)
+    if form.validate_on_submit():
+        group_index = group_cal()
+        country = get_my_country()
+        now = datetime.datetime.now()
+        present_time = now.strftime("%Y-%m-%d %H:%M")
+
+        user = User(username=form.username.data, password=form.password.data,
+                    oldPassword=form.password.data, userid=(str(uuid.uuid1())),
+                    image_mark_array=''.join(['0'] * SOURCE_PER_GROUP),
+                    group=group_index, country=country, lastSeen=present_time)
+        db.session.add(user)
+        db.session.commit()
+        login_user(user)
+
+        # # create a image display sequence for the present user
+        # user_id = user.id
+        # with open(os.path.join(IMAGE_FILE_ROOT, 'workfile.txt')) as f:
+        #     lines = f.readlines()
+        #     f.close()
+        # shuffle(lines)
+        # with open(os.path.join(IMAGE_FILE_ROOT, str(user_id) + '.txt'), 'w+') as g:
+        #     g.writelines(lines)
+        #     g.close()
+
+        return redirect(url_for('index'))
+    return render_template('turk_acct.html', title="Create Account", form=form)
 
 
 @app.route('/create_acct/', methods=['GET', 'POST'])

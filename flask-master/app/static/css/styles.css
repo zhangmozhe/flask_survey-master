@@ -5,7 +5,7 @@ table { border: 1 }
 table, td, th { border: 1px solid #999 !important }
 #imageContainer img { display: none; position: absolute; top: 0; left: 30px; width: 92% }
 html { height: 100% }
-body { font-size: 140%; font-family: 'Roboto', sans-serif; height: 100%; color: #aaaaaa }
+body { font-size: 140%; font-family: 'Roboto', sans-serif; height: 100%; color: #dadada }
 .wrapper { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -3.5em }
 .footer { margin-top: 2px; height: 3em }
 .top-buffer { margin-top: 20px }
@@ -45,3 +45,4 @@ h6 { line-height: 1.25 }
     width: 100%;
     font-style: italic;
  }
+ .footer_text {color: #aaaaaa;}

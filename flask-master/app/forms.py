@@ -16,7 +16,8 @@ def validate_login(form, field):
 class LoginForm(Form):
     username = fields.TextField(validators=[Required()])
     # email = fields.TextField(validators=[Required(), Email()])
-    password = fields.PasswordField(validators=[Required(), validate_login])
+    # password = fields.PasswordField(validators=[Required(), validate_login])
+    password = fields.PasswordField(validators=[validate_login])
 
     def get_user(self):
         return db.session.query(User).filter_by(username=self.username.data).first()
@@ -40,8 +41,10 @@ class RegistrationForm(Form):
     #     validators.EqualTo('confirm', message='Passwords must match')
     # ])
     # confirm = fields.PasswordField(validators=[Required()])
-    password = fields.PasswordField('New Password', [
-        validators.Required(), validators.Length(min=4, max=20)
+    # password = fields.PasswordField('New Password', [
+    #     validators.Required(), validators.Length(min=4, max=20)
+    # ])
+    password = fields.PasswordField('New Password', [validators.Length(min=0, max=20)
     ])
 
     def validate_username(self, field):
