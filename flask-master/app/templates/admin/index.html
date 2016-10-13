@@ -61,7 +61,7 @@
           <td>{%if user.s5%} &#x2714; {%else%} &#10006; {%endif%}</td>
           <td>{{user.question_index}}</td>
           <td>{{user.lastSeen}}</td>
-          <td>{{user.end_time-user.start_time}}</td>
+          <td>{% print "%.1f" % ((user.end_time-user.start_time)/60.0) %}</td>
           <td>{{user.country}}</td>
         </tr>
       {% endfor %}
