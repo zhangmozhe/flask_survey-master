@@ -46,6 +46,7 @@
         <th>IQA survey</th>
         <th># of answers</th>
         <th>Login Time</th>
+        <th>Duration</th>
         <th>Country</th>
       </tr>
     </thead>
@@ -60,6 +61,7 @@
           <td>{%if user.s5%} &#x2714; {%else%} &#10006; {%endif%}</td>
           <td>{{user.question_index}}</td>
           <td>{{user.lastSeen}}</td>
+          <td>{{user.end_time-user.start_time}}</td>
           <td>{{user.country}}</td>
         </tr>
       {% endfor %}

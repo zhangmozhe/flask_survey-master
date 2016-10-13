@@ -30,6 +30,8 @@ class User(UserMixin, CRUDMixin, db.Model):
     distortion_index_last = db.Column(db.Integer)
     distortion_index = db.Column(db.Integer)
     lastSeen = db.Column(db.String(255))
+    start_time = db.Column(db.Integer)
+    end_time = db.Column(db.Integer)
     image_mark_array = db.Column(db.String(255))
     country = db.Column(db.String(255))
 
@@ -55,7 +57,9 @@ class User(UserMixin, CRUDMixin, db.Model):
             group=None,
             image_mark_array=None,
             distortion_index_last=-1,
-            country=None):
+            country=None,
+            start_time=0,
+            end_time=0):
         self.email = email
         self.username = username
         self.userid = userid
@@ -76,6 +80,8 @@ class User(UserMixin, CRUDMixin, db.Model):
         self.image_mark_array = image_mark_array
         self.distortion_index_last = distortion_index_last
         self.country = country
+        self.start_time = start_time
+        self.end_time = end_time
 
     def is_admin(self):
         if self.role == 1:

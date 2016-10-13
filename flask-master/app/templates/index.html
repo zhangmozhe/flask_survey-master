@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg1.png') }}" />
-<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg2.png') }}" />
-<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg3.png') }}" />
-<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg4.png') }}" />
+<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg1.jpg') }}" />
+<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg2.jpg') }}" />
+<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg3.jpg') }}" />
+<link rel="prefetch" href="{{ url_for('static', filename='img/introduction/eg4.jpg') }}" />
 	<div class="jumbotron">
 		{% if not g.user.s1 %}
-		<h3>Hello, <i>{{ g.user.username }}</i></h3>
+		<h3>Welcome <i>{{ g.user.username }}</i>,</h3>
 		{% else %}
-		<h3>Welcome back, <i>{{ g.user.username }}</i></h3>
+		<h3>Hi <i>{{ g.user.username }}</i>,</h3>
 		{% endif %}
 		<p>Please complete the following surveys.</p>
 	</div>

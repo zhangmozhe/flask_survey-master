@@ -32,9 +32,9 @@ def initdb():
     db.session.add(admin)
     db.session.commit()
 
-    clear_index()
-    generate_index()
-
+    # clear_index()
+    # generate_index()
+    # group_index()
 
 if __name__ == "__main__":
     manager.run()

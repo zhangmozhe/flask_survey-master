@@ -20,6 +20,7 @@ from img_info import SOURCE_PER_GROUP, IMAGE_PER_GROUP, IMAGE_NUM, IMG_SERVER, G
 import os
 import linecache
 import pygeoip
+import time
 
 
 @app.route('/survey_1/', methods=['GET', 'POST'])
@@ -100,6 +101,7 @@ def survey_5():
             form.populate_obj(survey)
             survey.user = g.user
             db.session.add(survey)
+            g.user.end_time = int(time.time())
 
             db.session.commit()
             if g.user.question_index >= IMAGE_PER_GROUP:
@@ -109,6 +111,9 @@ def survey_5():
             else:
                 return redirect(url_for('survey_5'))
         else:
+            if g.user.question_index == 0:
+                g.user.start_time = int(time.time())
+                db.session.commit()
             if g.user.question_index >= IMAGE_PER_GROUP:
                 g.user.s5 = True
                 db.session.commit()
