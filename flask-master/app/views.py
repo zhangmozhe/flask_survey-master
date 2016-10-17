@@ -113,6 +113,7 @@ def survey_5():
         else:
             if g.user.question_index == 0:
                 g.user.start_time = int(time.time())
+                g.user.end_time = int(time.time())
                 db.session.commit()
             if g.user.question_index >= IMAGE_PER_GROUP:
                 g.user.s5 = True

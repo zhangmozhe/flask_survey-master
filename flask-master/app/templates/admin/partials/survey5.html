@@ -48,7 +48,7 @@
               <td>{{ survey.distortion }}</td>
               <td>{{ survey.coverage }}</td>
               <td>{{ survey.total_marks }}</td>
-              <td>{% print "%.1f" % ((survey.user.end_time - survey.user.start_time)/60.0) %}</td></td>
+              <td>{% print (survey.user.end_time)/60.0 %}</td>
             </tr>
           {% endfor %}
         </tbody>
